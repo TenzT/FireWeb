@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fireengineering.management.mapper.DeploymentMapper" >
+  <resultMap id="BaseResultMap" type="com.fireengineering.management.po.Deployment" >
+    <id column="deployment_id" property="deploymentId" jdbcType="INTEGER" />
+    <result column="project_id" property="projectId" jdbcType="INTEGER" />
+    <result column="deployment_location" property="deploymentLocation" jdbcType="VARCHAR" />
+    <result column="spot_id" property="spotId" jdbcType="INTEGER" />
+    <result column="depolyment_desc" property="depolymentDesc" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    deployment_id, project_id, deployment_location, spot_id, depolyment_desc
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.fireengineering.management.po.DeploymentExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from deployment
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from deployment
+    where deployment_id = #{deploymentId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from deployment
+    where deployment_id = #{deploymentId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.fireengineering.management.po.DeploymentExample" >
+    delete from deployment
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.fireengineering.management.po.Deployment" >
+    insert into deployment (deployment_id, project_id, deployment_location, 
+      spot_id, depolyment_desc)
+    values (#{deploymentId,jdbcType=INTEGER}, #{projectId,jdbcType=INTEGER}, #{deploymentLocation,jdbcType=VARCHAR}, 
+      #{spotId,jdbcType=INTEGER}, #{depolymentDesc,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.fireengineering.management.po.Deployment" >
+    insert into deployment
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="deploymentId != null" >
+        deployment_id,
+      </if>
+      <if test="projectId != null" >
+        project_id,
+      </if>
+      <if test="deploymentLocation != null" >
+        deployment_location,
+      </if>
+      <if test="spotId != null" >
+        spot_id,
+      </if>
+      <if test="depolymentDesc != null" >
+        depolyment_desc,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="deploymentId != null" >
+        #{deploymentId,jdbcType=INTEGER},
+      </if>
+      <if test="projectId != null" >
+        #{projectId,jdbcType=INTEGER},
+      </if>
+      <if test="deploymentLocation != null" >
+        #{deploymentLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="spotId != null" >
+        #{spotId,jdbcType=INTEGER},
+      </if>
+      <if test="depolymentDesc != null" >
+        #{depolymentDesc,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.fireengineering.management.po.DeploymentExample" resultType="java.lang.Integer" >
+    select count(*) from deployment
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update deployment
+    <set >
+      <if test="record.deploymentId != null" >
+        deployment_id = #{record.deploymentId,jdbcType=INTEGER},
+      </if>
+      <if test="record.projectId != null" >
+        project_id = #{record.projectId,jdbcType=INTEGER},
+      </if>
+      <if test="record.deploymentLocation != null" >
+        deployment_location = #{record.deploymentLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="record.spotId != null" >
+        spot_id = #{record.spotId,jdbcType=INTEGER},
+      </if>
+      <if test="record.depolymentDesc != null" >
+        depolyment_desc = #{record.depolymentDesc,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update deployment
+    set deployment_id = #{record.deploymentId,jdbcType=INTEGER},
+      project_id = #{record.projectId,jdbcType=INTEGER},
+      deployment_location = #{record.deploymentLocation,jdbcType=VARCHAR},
+      spot_id = #{record.spotId,jdbcType=INTEGER},
+      depolyment_desc = #{record.depolymentDesc,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.fireengineering.management.po.Deployment" >
+    update deployment
+    <set >
+      <if test="projectId != null" >
+        project_id = #{projectId,jdbcType=INTEGER},
+      </if>
+      <if test="deploymentLocation != null" >
+        deployment_location = #{deploymentLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="spotId != null" >
+        spot_id = #{spotId,jdbcType=INTEGER},
+      </if>
+      <if test="depolymentDesc != null" >
+        depolyment_desc = #{depolymentDesc,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where deployment_id = #{deploymentId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.fireengineering.management.po.Deployment" >
+    update deployment
+    set project_id = #{projectId,jdbcType=INTEGER},
+      deployment_location = #{deploymentLocation,jdbcType=VARCHAR},
+      spot_id = #{spotId,jdbcType=INTEGER},
+      depolyment_desc = #{depolymentDesc,jdbcType=VARCHAR}
+    where deployment_id = #{deploymentId,jdbcType=INTEGER}
+  </update>
+</mapper>
