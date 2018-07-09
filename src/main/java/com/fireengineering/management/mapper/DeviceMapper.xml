@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.fireengineering.management.mapper.UserMapper" >
-  <resultMap id="BaseResultMap" type="com.fireengineering.management.po.User" >
-    <id column="id" property="id" jdbcType="INTEGER" />
+<mapper namespace="com.fireengineering.management.mapper.DeviceMapper" >
+  <resultMap id="BaseResultMap" type="com.fireengineering.management.po.Device" >
+    <id column="did" property="id" jdbcType="INTEGER" />
     <result column="name" property="name" jdbcType="VARCHAR" />
-    <result column="password" property="password" jdbcType="VARCHAR" />
-    <result column="authority" property="authority" jdbcType="VARCHAR" />
-    <result column="desc" property="desc" jdbcType="VARCHAR" />
-    <result column="username" property="username" jdbcType="VARCHAR" />
-    <result column="contact" property="contact" jdbcType="VARCHAR" />
+    <result column="firesystem_id" property="firesystemId" jdbcType="INTEGER" />
+    <result column="note" property="note" jdbcType="VARCHAR" />
+    <result column="img" property="img" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="DevSystemMap" type="com.fireengineering.management.po.Device" >
+    <id column="did" property="id" jdbcType="INTEGER" />
+    <result column="dname" property="name" jdbcType="VARCHAR" />
+    <result column="firesystem_id" property="firesystemId" jdbcType="INTEGER" />
+    <result column="dnote" property="note" jdbcType="VARCHAR" />
+    <result column="dimg" property="img" jdbcType="VARCHAR" />
+    <association property="firesystem" javaType="com.fireengineering.management.po.Firesystem">
+      <id column="fid" property="id"></id>
+      <result column="fname" property="name"></result>
+    </association>
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -69,15 +78,23 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, name, password, authority, desc, username, contact
+    id, name, firesystem_id, note, img
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.fireengineering.management.po.UserExample" >
+  
+  <select id="selectByLimitAndOffset" resultMap="DevSystemMap">
+    select d.id did,d.name dname,d.firesystem_id,d.note dnote,d.img dimg,f.id fid,f.name fname
+    from device d, firesystem f
+    where
+    d.firesystem_id = f.id
+    LIMIT #{offset}, #{limit}
+  </select>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.fireengineering.management.po.DeviceExample" >
     select
     <if test="distinct" >
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from user
+    from device
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -88,29 +105,27 @@
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
-    from user
+    from device
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from user
+    delete from device
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.fireengineering.management.po.UserExample" >
-    delete from user
+  <delete id="deleteByExample" parameterType="com.fireengineering.management.po.DeviceExample" >
+    delete from device
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.fireengineering.management.po.User" >
-    insert into user (id, name, password, 
-      authority, desc, username, 
-      contact)
-    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
-      #{authority,jdbcType=VARCHAR}, #{desc,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, 
-      #{contact,jdbcType=VARCHAR})
+  <insert id="insert" parameterType="com.fireengineering.management.po.Device" >
+    insert into device (id, name, firesystem_id, 
+      note, img)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{firesystemId,jdbcType=INTEGER}, 
+      #{note,jdbcType=VARCHAR}, #{img,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.fireengineering.management.po.User" >
-    insert into user
+  <insert id="insertSelective" parameterType="com.fireengineering.management.po.Device" >
+    insert into device
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
@@ -118,20 +133,14 @@
       <if test="name != null" >
         name,
       </if>
-      <if test="password != null" >
-        password,
+      <if test="firesystemId != null" >
+        firesystem_id,
       </if>
-      <if test="authority != null" >
-        authority,
+      <if test="note != null" >
+        note,
       </if>
-      <if test="desc != null" >
-        desc,
-      </if>
-      <if test="username != null" >
-        username,
-      </if>
-      <if test="contact != null" >
-        contact,
+      <if test="img != null" >
+        img,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -141,31 +150,25 @@
       <if test="name != null" >
         #{name,jdbcType=VARCHAR},
       </if>
-      <if test="password != null" >
-        #{password,jdbcType=VARCHAR},
+      <if test="firesystemId != null" >
+        #{firesystemId,jdbcType=INTEGER},
       </if>
-      <if test="authority != null" >
-        #{authority,jdbcType=VARCHAR},
+      <if test="note != null" >
+        #{note,jdbcType=VARCHAR},
       </if>
-      <if test="desc != null" >
-        #{desc,jdbcType=VARCHAR},
-      </if>
-      <if test="username != null" >
-        #{username,jdbcType=VARCHAR},
-      </if>
-      <if test="contact != null" >
-        #{contact,jdbcType=VARCHAR},
+      <if test="img != null" >
+        #{img,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.fireengineering.management.po.UserExample" resultType="java.lang.Integer" >
-    select count(*) from user
+  <select id="countByExample" parameterType="com.fireengineering.management.po.DeviceExample" resultType="java.lang.Integer" >
+    select count(*) from device
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map" >
-    update user
+    update device
     <set >
       <if test="record.id != null" >
         id = #{record.id,jdbcType=INTEGER},
@@ -173,20 +176,14 @@
       <if test="record.name != null" >
         name = #{record.name,jdbcType=VARCHAR},
       </if>
-      <if test="record.password != null" >
-        password = #{record.password,jdbcType=VARCHAR},
+      <if test="record.firesystemId != null" >
+        firesystem_id = #{record.firesystemId,jdbcType=INTEGER},
       </if>
-      <if test="record.authority != null" >
-        authority = #{record.authority,jdbcType=VARCHAR},
+      <if test="record.note != null" >
+        note = #{record.note,jdbcType=VARCHAR},
       </if>
-      <if test="record.desc != null" >
-        desc = #{record.desc,jdbcType=VARCHAR},
-      </if>
-      <if test="record.username != null" >
-        username = #{record.username,jdbcType=VARCHAR},
-      </if>
-      <if test="record.contact != null" >
-        contact = #{record.contact,jdbcType=VARCHAR},
+      <if test="record.img != null" >
+        img = #{record.img,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -194,50 +191,40 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map" >
-    update user
+    update device
     set id = #{record.id,jdbcType=INTEGER},
       name = #{record.name,jdbcType=VARCHAR},
-      password = #{record.password,jdbcType=VARCHAR},
-      authority = #{record.authority,jdbcType=VARCHAR},
-      desc = #{record.desc,jdbcType=VARCHAR},
-      username = #{record.username,jdbcType=VARCHAR},
-      contact = #{record.contact,jdbcType=VARCHAR}
+      firesystem_id = #{record.firesystemId,jdbcType=INTEGER},
+      note = #{record.note,jdbcType=VARCHAR},
+      img = #{record.img,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.fireengineering.management.po.User" >
-    update user
+  <update id="updateByPrimaryKeySelective" parameterType="com.fireengineering.management.po.Device" >
+    update device
     <set >
       <if test="name != null" >
         name = #{name,jdbcType=VARCHAR},
       </if>
-      <if test="password != null" >
-        password = #{password,jdbcType=VARCHAR},
+      <if test="firesystemId != null" >
+        firesystem_id = #{firesystemId,jdbcType=INTEGER},
       </if>
-      <if test="authority != null" >
-        authority = #{authority,jdbcType=VARCHAR},
+      <if test="note != null" >
+        note = #{note,jdbcType=VARCHAR},
       </if>
-      <if test="desc != null" >
-        desc = #{desc,jdbcType=VARCHAR},
-      </if>
-      <if test="username != null" >
-        username = #{username,jdbcType=VARCHAR},
-      </if>
-      <if test="contact != null" >
-        contact = #{contact,jdbcType=VARCHAR},
+      <if test="img != null" >
+        img = #{img,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.fireengineering.management.po.User" >
-    update user
+  <update id="updateByPrimaryKey" parameterType="com.fireengineering.management.po.Device" >
+    update device
     set name = #{name,jdbcType=VARCHAR},
-      password = #{password,jdbcType=VARCHAR},
-      authority = #{authority,jdbcType=VARCHAR},
-      desc = #{desc,jdbcType=VARCHAR},
-      username = #{username,jdbcType=VARCHAR},
-      contact = #{contact,jdbcType=VARCHAR}
+      firesystem_id = #{firesystemId,jdbcType=INTEGER},
+      note = #{note,jdbcType=VARCHAR},
+      img = #{img,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

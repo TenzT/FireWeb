@@ -1,22 +1,22 @@
 package com.fireengineering.management.po;
 
 public class Deployment {
-    private Integer deploymentId;
+    private Integer id;
 
     private Integer projectId;
 
-    private String deploymentLocation;
+    private String location;
 
     private Integer spotId;
 
-    private String depolymentDesc;
+    private String note;
 
-    public Integer getDeploymentId() {
-        return deploymentId;
+    public Integer getId() {
+        return id;
     }
 
-    public void setDeploymentId(Integer deploymentId) {
-        this.deploymentId = deploymentId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public Integer getProjectId() {
@@ -27,12 +27,12 @@ public class Deployment {
         this.projectId = projectId;
     }
 
-    public String getDeploymentLocation() {
-        return deploymentLocation;
+    public String getLocation() {
+        return location;
     }
 
-    public void setDeploymentLocation(String deploymentLocation) {
-        this.deploymentLocation = deploymentLocation == null ? null : deploymentLocation.trim();
+    public void setLocation(String location) {
+        this.location = location == null ? null : location.trim();
     }
 
     public Integer getSpotId() {
@@ -43,11 +43,11 @@ public class Deployment {
         this.spotId = spotId;
     }
 
-    public String getDepolymentDesc() {
-        return depolymentDesc;
+    public String getNote() {
+        return note;
     }
 
-    public void setDepolymentDesc(String depolymentDesc) {
-        this.depolymentDesc = depolymentDesc == null ? null : depolymentDesc.trim();
+    public void setNote(String note) {
+        this.note = note == null ? null : note.trim();
     }
 }

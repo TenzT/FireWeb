@@ -7,7 +7,7 @@
 
   <!-- 启动页面 -->
   <welcome-file-list>
-    <welcome-file>/WEB-INF/jsp/login.jsp</welcome-file>
+    <welcome-file>fire/login.jsp</welcome-file>
   </welcome-file-list>
   
   <!-- Bootstraps the root web application context before servlet initialization -->

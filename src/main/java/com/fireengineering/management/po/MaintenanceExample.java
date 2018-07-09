@@ -104,63 +104,63 @@ public class MaintenanceExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andMaintenanceIdIsNull() {
-            addCriterion("maintenance_id is null");
+        public Criteria andIdIsNull() {
+            addCriterion("id is null");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceIdIsNotNull() {
-            addCriterion("maintenance_id is not null");
+        public Criteria andIdIsNotNull() {
+            addCriterion("id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceIdEqualTo(Integer value) {
-            addCriterion("maintenance_id =", value, "maintenanceId");
+        public Criteria andIdEqualTo(Integer value) {
+            addCriterion("id =", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceIdNotEqualTo(Integer value) {
-            addCriterion("maintenance_id <>", value, "maintenanceId");
+        public Criteria andIdNotEqualTo(Integer value) {
+            addCriterion("id <>", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceIdGreaterThan(Integer value) {
-            addCriterion("maintenance_id >", value, "maintenanceId");
+        public Criteria andIdGreaterThan(Integer value) {
+            addCriterion("id >", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceIdGreaterThanOrEqualTo(Integer value) {
-            addCriterion("maintenance_id >=", value, "maintenanceId");
+        public Criteria andIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("id >=", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceIdLessThan(Integer value) {
-            addCriterion("maintenance_id <", value, "maintenanceId");
+        public Criteria andIdLessThan(Integer value) {
+            addCriterion("id <", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceIdLessThanOrEqualTo(Integer value) {
-            addCriterion("maintenance_id <=", value, "maintenanceId");
+        public Criteria andIdLessThanOrEqualTo(Integer value) {
+            addCriterion("id <=", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceIdIn(List<Integer> values) {
-            addCriterion("maintenance_id in", values, "maintenanceId");
+        public Criteria andIdIn(List<Integer> values) {
+            addCriterion("id in", values, "id");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceIdNotIn(List<Integer> values) {
-            addCriterion("maintenance_id not in", values, "maintenanceId");
+        public Criteria andIdNotIn(List<Integer> values) {
+            addCriterion("id not in", values, "id");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceIdBetween(Integer value1, Integer value2) {
-            addCriterion("maintenance_id between", value1, value2, "maintenanceId");
+        public Criteria andIdBetween(Integer value1, Integer value2) {
+            addCriterion("id between", value1, value2, "id");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceIdNotBetween(Integer value1, Integer value2) {
-            addCriterion("maintenance_id not between", value1, value2, "maintenanceId");
+        public Criteria andIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("id not between", value1, value2, "id");
             return (Criteria) this;
         }
 
@@ -374,143 +374,143 @@ public class MaintenanceExample {
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceRecordIsNull() {
-            addCriterion("maintenance_record is null");
+        public Criteria andRecordIsNull() {
+            addCriterion("record is null");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceRecordIsNotNull() {
-            addCriterion("maintenance_record is not null");
+        public Criteria andRecordIsNotNull() {
+            addCriterion("record is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceRecordEqualTo(String value) {
-            addCriterion("maintenance_record =", value, "maintenanceRecord");
+        public Criteria andRecordEqualTo(String value) {
+            addCriterion("record =", value, "record");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceRecordNotEqualTo(String value) {
-            addCriterion("maintenance_record <>", value, "maintenanceRecord");
+        public Criteria andRecordNotEqualTo(String value) {
+            addCriterion("record <>", value, "record");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceRecordGreaterThan(String value) {
-            addCriterion("maintenance_record >", value, "maintenanceRecord");
+        public Criteria andRecordGreaterThan(String value) {
+            addCriterion("record >", value, "record");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceRecordGreaterThanOrEqualTo(String value) {
-            addCriterion("maintenance_record >=", value, "maintenanceRecord");
+        public Criteria andRecordGreaterThanOrEqualTo(String value) {
+            addCriterion("record >=", value, "record");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceRecordLessThan(String value) {
-            addCriterion("maintenance_record <", value, "maintenanceRecord");
+        public Criteria andRecordLessThan(String value) {
+            addCriterion("record <", value, "record");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceRecordLessThanOrEqualTo(String value) {
-            addCriterion("maintenance_record <=", value, "maintenanceRecord");
+        public Criteria andRecordLessThanOrEqualTo(String value) {
+            addCriterion("record <=", value, "record");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceRecordLike(String value) {
-            addCriterion("maintenance_record like", value, "maintenanceRecord");
+        public Criteria andRecordLike(String value) {
+            addCriterion("record like", value, "record");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceRecordNotLike(String value) {
-            addCriterion("maintenance_record not like", value, "maintenanceRecord");
+        public Criteria andRecordNotLike(String value) {
+            addCriterion("record not like", value, "record");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceRecordIn(List<String> values) {
-            addCriterion("maintenance_record in", values, "maintenanceRecord");
+        public Criteria andRecordIn(List<String> values) {
+            addCriterion("record in", values, "record");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceRecordNotIn(List<String> values) {
-            addCriterion("maintenance_record not in", values, "maintenanceRecord");
+        public Criteria andRecordNotIn(List<String> values) {
+            addCriterion("record not in", values, "record");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceRecordBetween(String value1, String value2) {
-            addCriterion("maintenance_record between", value1, value2, "maintenanceRecord");
+        public Criteria andRecordBetween(String value1, String value2) {
+            addCriterion("record between", value1, value2, "record");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceRecordNotBetween(String value1, String value2) {
-            addCriterion("maintenance_record not between", value1, value2, "maintenanceRecord");
+        public Criteria andRecordNotBetween(String value1, String value2) {
+            addCriterion("record not between", value1, value2, "record");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceDescIsNull() {
-            addCriterion("maintenance_desc is null");
+        public Criteria andNoteIsNull() {
+            addCriterion("note is null");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceDescIsNotNull() {
-            addCriterion("maintenance_desc is not null");
+        public Criteria andNoteIsNotNull() {
+            addCriterion("note is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceDescEqualTo(String value) {
-            addCriterion("maintenance_desc =", value, "maintenanceDesc");
+        public Criteria andNoteEqualTo(String value) {
+            addCriterion("note =", value, "note");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceDescNotEqualTo(String value) {
-            addCriterion("maintenance_desc <>", value, "maintenanceDesc");
+        public Criteria andNoteNotEqualTo(String value) {
+            addCriterion("note <>", value, "note");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceDescGreaterThan(String value) {
-            addCriterion("maintenance_desc >", value, "maintenanceDesc");
+        public Criteria andNoteGreaterThan(String value) {
+            addCriterion("note >", value, "note");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceDescGreaterThanOrEqualTo(String value) {
-            addCriterion("maintenance_desc >=", value, "maintenanceDesc");
+        public Criteria andNoteGreaterThanOrEqualTo(String value) {
+            addCriterion("note >=", value, "note");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceDescLessThan(String value) {
-            addCriterion("maintenance_desc <", value, "maintenanceDesc");
+        public Criteria andNoteLessThan(String value) {
+            addCriterion("note <", value, "note");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceDescLessThanOrEqualTo(String value) {
-            addCriterion("maintenance_desc <=", value, "maintenanceDesc");
+        public Criteria andNoteLessThanOrEqualTo(String value) {
+            addCriterion("note <=", value, "note");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceDescLike(String value) {
-            addCriterion("maintenance_desc like", value, "maintenanceDesc");
+        public Criteria andNoteLike(String value) {
+            addCriterion("note like", value, "note");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceDescNotLike(String value) {
-            addCriterion("maintenance_desc not like", value, "maintenanceDesc");
+        public Criteria andNoteNotLike(String value) {
+            addCriterion("note not like", value, "note");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceDescIn(List<String> values) {
-            addCriterion("maintenance_desc in", values, "maintenanceDesc");
+        public Criteria andNoteIn(List<String> values) {
+            addCriterion("note in", values, "note");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceDescNotIn(List<String> values) {
-            addCriterion("maintenance_desc not in", values, "maintenanceDesc");
+        public Criteria andNoteNotIn(List<String> values) {
+            addCriterion("note not in", values, "note");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceDescBetween(String value1, String value2) {
-            addCriterion("maintenance_desc between", value1, value2, "maintenanceDesc");
+        public Criteria andNoteBetween(String value1, String value2) {
+            addCriterion("note between", value1, value2, "note");
             return (Criteria) this;
         }
 
-        public Criteria andMaintenanceDescNotBetween(String value1, String value2) {
-            addCriterion("maintenance_desc not between", value1, value2, "maintenanceDesc");
+        public Criteria andNoteNotBetween(String value1, String value2) {
+            addCriterion("note not between", value1, value2, "note");
             return (Criteria) this;
         }
     }

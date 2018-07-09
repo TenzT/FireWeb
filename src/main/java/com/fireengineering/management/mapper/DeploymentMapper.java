@@ -10,7 +10,7 @@ public interface DeploymentMapper {
 
     int deleteByExample(DeploymentExample example);
 
-    int deleteByPrimaryKey(Integer deploymentId);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(Deployment record);
 
@@ -18,7 +18,7 @@ public interface DeploymentMapper {
 
     List<Deployment> selectByExample(DeploymentExample example);
 
-    Deployment selectByPrimaryKey(Integer deploymentId);
+    Deployment selectByPrimaryKey(Integer id);
 
     int updateByExampleSelective(@Param("record") Deployment record, @Param("example") DeploymentExample example);
 

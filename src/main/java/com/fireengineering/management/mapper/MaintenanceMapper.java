@@ -10,7 +10,7 @@ public interface MaintenanceMapper {
 
     int deleteByExample(MaintenanceExample example);
 
-    int deleteByPrimaryKey(Integer maintenanceId);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(Maintenance record);
 
@@ -18,7 +18,7 @@ public interface MaintenanceMapper {
 
     List<Maintenance> selectByExample(MaintenanceExample example);
 
-    Maintenance selectByPrimaryKey(Integer maintenanceId);
+    Maintenance selectByPrimaryKey(Integer id);
 
     int updateByExampleSelective(@Param("record") Maintenance record, @Param("example") MaintenanceExample example);
 

@@ -1,73 +1,73 @@
 package com.fireengineering.management.po;
 
 public class User {
-    private Integer userId;
+    private Integer id;
 
-    private String userName;
+    private String name;
 
-    private String userPassword;
+    private String password;
 
-    private String userAuthority;
+    private String authority;
 
-    private String userDesc;
+    private String desc;
 
-    private String userUsername;
+    private String username;
 
-    private String userContact;
+    private String contact;
 
-    public Integer getUserId() {
-        return userId;
+    public Integer getId() {
+        return id;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getName() {
+        return name;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName == null ? null : userName.trim();
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
     }
 
-    public String getUserPassword() {
-        return userPassword;
+    public String getPassword() {
+        return password;
     }
 
-    public void setUserPassword(String userPassword) {
-        this.userPassword = userPassword == null ? null : userPassword.trim();
+    public void setPassword(String password) {
+        this.password = password == null ? null : password.trim();
     }
 
-    public String getUserAuthority() {
-        return userAuthority;
+    public String getAuthority() {
+        return authority;
     }
 
-    public void setUserAuthority(String userAuthority) {
-        this.userAuthority = userAuthority == null ? null : userAuthority.trim();
+    public void setAuthority(String authority) {
+        this.authority = authority == null ? null : authority.trim();
     }
 
-    public String getUserDesc() {
-        return userDesc;
+    public String getDesc() {
+        return desc;
     }
 
-    public void setUserDesc(String userDesc) {
-        this.userDesc = userDesc == null ? null : userDesc.trim();
+    public void setDesc(String desc) {
+        this.desc = desc == null ? null : desc.trim();
     }
 
-    public String getUserUsername() {
-        return userUsername;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserUsername(String userUsername) {
-        this.userUsername = userUsername == null ? null : userUsername.trim();
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
     }
 
-    public String getUserContact() {
-        return userContact;
+    public String getContact() {
+        return contact;
     }
 
-    public void setUserContact(String userContact) {
-        this.userContact = userContact == null ? null : userContact.trim();
+    public void setContact(String contact) {
+        this.contact = contact == null ? null : contact.trim();
     }
 }

@@ -1,11 +1,9 @@
 package com.fireengineering.management.po;
 
-public class Project {
+public class Firesystem {
     private Integer id;
 
     private String name;
-
-    private String leader;
 
     private String note;
 
@@ -23,14 +21,6 @@ public class Project {
 
     public void setName(String name) {
         this.name = name == null ? null : name.trim();
-    }
-
-    public String getLeader() {
-        return leader;
-    }
-
-    public void setLeader(String leader) {
-        this.leader = leader == null ? null : leader.trim();
     }
 
     public String getNote() {

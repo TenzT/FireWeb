@@ -1,7 +1,7 @@
 package com.fireengineering.management.po;
 
 public class Maintenance {
-    private Integer maintenanceId;
+    private Integer id;
 
     private String userId;
 
@@ -9,16 +9,16 @@ public class Maintenance {
 
     private String deploymentId;
 
-    private String maintenanceRecord;
+    private String record;
 
-    private String maintenanceDesc;
+    private String note;
 
-    public Integer getMaintenanceId() {
-        return maintenanceId;
+    public Integer getId() {
+        return id;
     }
 
-    public void setMaintenanceId(Integer maintenanceId) {
-        this.maintenanceId = maintenanceId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getUserId() {
@@ -45,19 +45,19 @@ public class Maintenance {
         this.deploymentId = deploymentId == null ? null : deploymentId.trim();
     }
 
-    public String getMaintenanceRecord() {
-        return maintenanceRecord;
+    public String getRecord() {
+        return record;
     }
 
-    public void setMaintenanceRecord(String maintenanceRecord) {
-        this.maintenanceRecord = maintenanceRecord == null ? null : maintenanceRecord.trim();
+    public void setRecord(String record) {
+        this.record = record == null ? null : record.trim();
     }
 
-    public String getMaintenanceDesc() {
-        return maintenanceDesc;
+    public String getNote() {
+        return note;
     }
 
-    public void setMaintenanceDesc(String maintenanceDesc) {
-        this.maintenanceDesc = maintenanceDesc == null ? null : maintenanceDesc.trim();
+    public void setNote(String note) {
+        this.note = note == null ? null : note.trim();
     }
 }
