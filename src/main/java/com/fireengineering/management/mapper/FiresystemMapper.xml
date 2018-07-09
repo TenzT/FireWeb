@@ -67,6 +67,21 @@
   <sql id="Base_Column_List" >
     id, name, note
   </sql>
+  
+  <select id="selectByLimitAndOffset" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from firesystem
+    LIMIT #{offset}, #{limit}
+  </select>
+
+  <select id="selectByName" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from firesystem
+    where name=#{firesystemName}
+  </select>
+
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.fireengineering.management.po.FiresystemExample" >
     select
     <if test="distinct" >

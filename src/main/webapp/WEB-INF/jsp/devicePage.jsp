@@ -5,10 +5,9 @@
     <title>设备管理页面</title>
 </head>
 <body>
-<div class="fire_container">
+<div class="fire_device_container">
     <!-- 导航条 -->
     <%@ include file="commom/head.jsp"%>
-
     <!-- 中间部分（包括左边栏和员工/部门表单显示部分） -->
     <div class="fire_body" style="position:relative; top:-15px;">
 
@@ -26,7 +25,7 @@
                         <li class="active">设备管理</li>
                     </ol>
                     <div>
-                        <a href="#" class="device_add_btn">新增设备</a>
+                        <a href="#" class="device_add_btn" data-toggle="modal" data-target=".firesystem-add-modal">新增设备</a>
                     </div>
                 </div>
                 <!-- Table -->
@@ -66,7 +65,7 @@
                             <c:if test="${curPage==1}">
                                 <li class="disabled">
                                     <a href="#" aria-label="Previous" class="prePage">
-                                        <span aria-hidden="true"></span>
+                                        <span aria-hidden="true">&laquo;</span>
                                     </a>
                                 </li>
                             </c:if>

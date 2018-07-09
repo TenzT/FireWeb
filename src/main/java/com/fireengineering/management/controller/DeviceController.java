@@ -136,7 +136,7 @@ public class DeviceController {
     @RequestMapping(value = "/getDeviceList", method = RequestMethod.GET)
     public ModelAndView getDevice(@RequestParam(value = "pageNo", defaultValue = "1") Integer pageNo){
         ModelAndView mv = new ModelAndView("devicePage");
-        int limit = 8;
+        int limit = 5;
         // 记录的偏移量(即从第offset行记录开始查询)，
         // 如第1页是从第1行(offset=(21-1)*5=0,offset+1=0+1=1)开始查询；
         // 第2页从第6行(offset=(2-1)*5=5,offset+1=5+1=6)记录开始查询

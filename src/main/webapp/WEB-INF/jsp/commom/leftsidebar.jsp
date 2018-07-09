@@ -46,7 +46,7 @@
                 <li role="presentation"><a href="#" class="device_management">设备管理</a></li>
                 <li role="presentation"><a href="#" class="system_management">消防系统管理</a></li>
                 <li role="presentation"><a href="#" class="project_management">项目管理</a></li>
-                <li role="presentation"><a href="#" class="deployment_management">部署信息</a></li>
+                <li role="presentation"><a href="#" class="deployment_management">部署管理</a></li>
             </ul>
         </li>
     </ul>
@@ -72,10 +72,8 @@
         $(this).attr("href", "/fire/device/getDeviceList");
     });
     //员工清零
-    $(".emp_clearall_btn").click(function () {
-        if (confirm("确认删除所有员工信息吗？")){
-            $(this).attr("href", "/fire/emp/clearAllEmp");
-        }
+    $(".system_management").click(function () {
+        $(this).attr("href", "/fire/firesystem/getFiresystemList");
     });
     //部门清零这个功能暂未实现
     $(".dept_clearall_btn").click(function () {

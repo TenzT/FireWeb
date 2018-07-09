@@ -27,4 +27,8 @@ public interface FiresystemMapper {
     int updateByPrimaryKeySelective(Firesystem record);
 
     int updateByPrimaryKey(Firesystem record);
+
+    List<Firesystem> selectByLimitAndOffset(@Param("offset") Integer offset, @Param("limit")Integer limit);
+
+    Firesystem selectByName(@Param("firesystemName")String firesystemName);
 }
