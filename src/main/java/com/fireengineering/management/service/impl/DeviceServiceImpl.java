@@ -24,6 +24,13 @@ public class DeviceServiceImpl implements DeviceService {
         return deviceMapper.selectByPrimaryKey(deviceId);
     }
 
+    public Device getDeviceByName(String deviceName){
+        if(deviceName==null) {
+            return null;
+        }
+        return deviceMapper.selectByName(deviceName);
+    }
+
 
     public List<Device> getDeviceList(Integer offset, Integer limit) {
         return deviceMapper.selectByLimitAndOffset(offset, limit);
@@ -35,5 +42,9 @@ public class DeviceServiceImpl implements DeviceService {
 
     public int addDevice(Device device) {
         return deviceMapper.insert(device);
+    }
+
+    public int updateDeviceById(Device device) {
+        return deviceMapper.updateByPrimaryKey(device);
     }
 }

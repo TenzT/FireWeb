@@ -66,7 +66,7 @@ public class FireSystemController {
     }
 
     /**
-     * 查询输入的系统姓名是否重复
+     * 查询输入的系统名称是否重复
      * @param firesystemName
      * @return
      */
@@ -80,7 +80,7 @@ public class FireSystemController {
         }
         Firesystem firesystem = firesystemService.getFiresystemByName(firesystemName);
         if (firesystem != null){
-            return JsonMsg.fail().addInfo("name_reg_error", "用户名重复");
+            return JsonMsg.fail().addInfo("name_reg_error", "系统名重复");
         }else {
             return JsonMsg.success();
         }

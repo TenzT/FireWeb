@@ -9,11 +9,9 @@
     <!-- 导航栏-->
     <%@ include file="./commom/head.jsp"%>
     <!-- 中间部分（左侧栏+表格内容） -->
-    <div class="fire_firesystem_body" style="position:relative; top:-15px;>
+    <div class="fire_firesystem_body" style="position:relative; top:-15px;">
         <!-- 左侧栏 -->
         <%@ include file="./commom/leftsidebar.jsp"%>
-
-        <!-- 部门表格内容 -->
         <div class="firesystem_info col-sm-10">
             <div class="panel panel-success">
                 <!-- 路径导航 -->
@@ -52,60 +50,60 @@
                     <div class="table_items">
                         当前第<span class="badge">${curPageNo}</span>页，共有<span class="badge">${totalPages}</span>页，总记录数<span class="badge">${totalItems}</span>条。
                     </div>
-                    <nav aria-label="Page navigation" class="pull-right">
-                        <ul class="pagination">
-                            <li><a href="/fire/firesystem/getFiresystemList?pageNo=1">首页</a></li>
-                            <c:if test="${curPageNo==1}">
-                                <li class="disabled">
-                                    <a href="#" aria-label="Previous" class="prePage">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                            </c:if>
-                            <c:if test="${curPageNo!=1}">
-                                <li>
-                                    <a href="#" aria-label="Previous" class="prePage">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                            </c:if>
-
-                            <c:forEach begin="1" end="${totalPages<5?totalPages:5}" step="1" var="itemPage">
-                                <c:if test="${curPageNo == itemPage}">
-                                    <li class="active"><a href="/fire/firesystem/getFiresystemList?pageNo=${itemPage}">${itemPage}</a></li>
+                        <nav aria-label="Page navigation" class="pull-right">
+                            <ul class="pagination">
+                                <li><a href="/fire/firesystem/getFiresystemList?pageNo=1">首页</a></li>
+                                <c:if test="${curPageNo==1}">
+                                    <li class="disabled">
+                                        <a href="#" aria-label="Previous" class="prePage">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
                                 </c:if>
-                                <c:if test="${curPageNo != itemPage}">
-                                    <li><a href="/fire/firesystem/getFiresystemList?pageNo=${itemPage}">${itemPage}</a></li>
+                                <c:if test="${curPageNo!=1}">
+                                    <li>
+                                        <a href="#" aria-label="Previous" class="prePage">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
                                 </c:if>
-                            </c:forEach>
 
-                            <c:if test="${curPageNo==totalPages}">
-                                <li class="disabled" class="nextPage">
-                                    <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </c:if>
-                            <c:if test="${curPageNo!=totalPages}">
-                                <li>
-                                    <a href="#" aria-label="Next" class="nextPage">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </c:if>
-                            <li><a href="/fire/firesystem/getFiresystemList?pageNo=${totalPages}">尾页</a></li>
-                        </ul>
-                    </nav>
+                                <c:forEach begin="1" end="${totalPages<5?totalPages:5}" step="1" var="itemPage">
+                                    <c:if test="${curPageNo == itemPage}">
+                                        <li class="active"><a href="/fire/firesystem/getFiresystemList?pageNo=${itemPage}">${itemPage}</a></li>
+                                    </c:if>
+                                    <c:if test="${curPageNo != itemPage}">
+                                        <li><a href="/fire/firesystem/getFiresystemList?pageNo=${itemPage}">${itemPage}</a></li>
+                                    </c:if>
+                                </c:forEach>
+
+                                <c:if test="${curPageNo==totalPages}">
+                                    <li class="disabled" class="nextPage">
+                                        <a href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </c:if>
+                                <c:if test="${curPageNo!=totalPages}">
+                                    <li>
+                                        <a href="#" aria-label="Next" class="nextPage">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </c:if>
+                                <li><a href="/fire/firesystem/getFiresystemList?pageNo=${totalPages}">尾页</a></li>
+                            </ul>
+                        </nav>
                 </div>
             </div><!-- /.panel panel-success -->
-        </div><!-- /.dept_info -->
-    </div><!-- /.hrms_dept_body -->
-
-    <%@ include file="firesystemAdd.jsp"%>
-    <%@ include file="firesystemUpdate.jsp"%>
-
-    <!-- 尾部-->
+        </div>
+    </div><!-- .fire_firesystem_body -->
+    <!-- 尾部 -->
     <%@ include file="./commom/foot.jsp"%>
+</div><!-- /.dept_info -->
+
+<%@ include file="firesystemAdd.jsp"%>
+<%@ include file="firesystemUpdate.jsp"%>
 
 <script type="text/javascript">
     var curPageNo = ${curPageNo};

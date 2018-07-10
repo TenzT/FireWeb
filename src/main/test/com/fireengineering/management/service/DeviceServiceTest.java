@@ -46,4 +46,15 @@ public class DeviceServiceTest {
         device.setFiresystemId(1);
         deviceService.addDevice(device);
     }
+
+    @Test
+    public void getDeviceByName() {
+        Device device = deviceService.getDeviceByName("消防栓");
+        System.out.println(device.getName());
+    }
+
+//    @Test
+//    public void updateDeviceById() {
+//
+//    }
 }

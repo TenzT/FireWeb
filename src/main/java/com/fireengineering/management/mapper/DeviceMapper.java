@@ -29,4 +29,6 @@ public interface DeviceMapper {
     int updateByPrimaryKey(Device record);
 
     List<Device> selectByLimitAndOffset(@Param("offset") Integer offset, @Param("limit")Integer limit);
+
+    Device selectByName(@Param("deviceName") String deviceName);
 }

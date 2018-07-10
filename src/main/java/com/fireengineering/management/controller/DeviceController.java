@@ -47,87 +47,89 @@ public class DeviceController {
 
     /**
      * 更改设备信息
-     * @param empId
-     * @param employee
+     * @param deviceId
+     * @param device
      * @return
      */
-//    @RequestMapping(value ="/updateEmp/{empId}", method = RequestMethod.PUT)
-//    @ResponseBody
-//    public JsonMsg updateEmp(@PathVariable("empId") Integer empId,  Employee employee){
-//        int res = employeeService.updateEmpById(empId, employee);
-//        if (res != 1){
-//            return JsonMsg.fail().addInfo("emp_update_error", "更改异常");
-//        }
-//        return JsonMsg.success();
-//    }
+    @RequestMapping(value ="/updateDevice/{deviceId}", method = RequestMethod.PUT)
+    @ResponseBody
+    public JsonMsg updateEmp(@PathVariable("deviceId") Integer deviceId,  Device device){
+        device.setId(deviceId);
+        int res = devicesService.updateDeviceById(device);
+        if (res != 1){
+            return JsonMsg.fail().addInfo("dev_update_error", "更改异常");
+        }
+        return JsonMsg.success();
+    }
 
     /**
-     * 查询输入的员工姓名是否重复
-     * @param empName
+     * 查询输入的设备姓名是否重复
+     * @param deviceName
      * @return
      */
-//    @RequestMapping(value = "/checkEmpExists", method = RequestMethod.GET)
-//    @ResponseBody
-//    public JsonMsg checkEmpExists(@RequestParam("empName") String empName){
-//        //对输入的姓名与邮箱格式进行验证
-//        String regName = "(^[a-zA-Z0-9_-]{3,16}$)|(^[\\u4E00-\\u9FA5]{2,5})";
-//        if(!empName.matches(regName)){
-//            return JsonMsg.fail().addInfo("name_reg_error", "输入姓名为2-5位中文或6-16位英文和数字组合");
-//        }
-//        Employee employee = employeeService.getEmpByName(empName);
-//        if (employee != null){
-//            return JsonMsg.fail().addInfo("name_reg_error", "用户名重复");
-//        }else {
-//            return JsonMsg.success();
-//        }
-//    }
+    @RequestMapping(value = "/checkDeviceExists", method = RequestMethod.GET)
+    @ResponseBody
+    public JsonMsg checkEmpExists(@RequestParam("deviceName") String deviceName){
+        //对输入的姓名与邮箱格式进行验证
+        String regName = "(^[a-zA-Z0-9_-]{6,16}$)|(^[\\u4E00-\\u9FA5]{2,20})";
+        if(!deviceName.matches(regName)){
+            return JsonMsg.fail().addInfo("name_reg_error", "输入姓名为2-20位中文或6-16位英文和数字组合");
+        }
+        Device device = devicesService.getDeviceByName(deviceName);
+        if (device != null){
+            return JsonMsg.fail().addInfo("name_reg_error", "设备名重复");
+        }else {
+            return JsonMsg.success();
+        }
+    }
 
     /**
-     * 新增记录后，查询最新的页数
+     * 新增设备后，查询最新的页数
      * @return
      */
-//    @RequestMapping(value = "/getTotalPages", method = RequestMethod.GET)
-//    @ResponseBody
-//    public JsonMsg getTotalPage(){
-//        int totalItems = employeeService.getEmpCount();
-//        //获取总的页数
-//        int temp = totalItems / 5;
-//        int totalPages = (totalItems % 5 == 0) ? temp : temp+1;
-//        return JsonMsg.success().addInfo("totalPages", totalPages);
-//    }
+    @RequestMapping(value = "/getTotalPages", method = RequestMethod.GET)
+    @ResponseBody
+    public JsonMsg getTotalPage(){
+        int totalItems = devicesService.getDeviceCount();
+        //获取总的页数
+        int temp = totalItems / 5;
+        int totalPages = (totalItems % 5 == 0) ? temp : temp+1;
+        return JsonMsg.success().addInfo("totalPages", totalPages);
+    }
 
     /**
-     * 新增员工
-     * @param employee 新增的员工信息
+     * 新增设备
+     * @param device
      * @return
      */
-//    @RequestMapping(value = "/addEmp", method = RequestMethod.POST)
-//    @ResponseBody
-//    public JsonMsg addEmp(Employee employee){
-//        int res = employeeService.addEmp(employee);
-//        if (res == 1){
-//            return JsonMsg.success();
-//        }else {
-//            return JsonMsg.fail();
-//        }
-//    }
+    @RequestMapping(value = "/addDevice", method = RequestMethod.POST)
+    @ResponseBody
+    public JsonMsg addEmp(Device device){
+        int res = devicesService.addDevice(device);
+        if (res == 1){
+            return JsonMsg.success();
+        }else {
+            return JsonMsg.fail();
+        }
+    }
 
     /**
-     * 根据id查询员工信息
-     * @param empId
+     * 根据id查询设备信息
+     * @param deviceId
      * @return
      */
-//    @RequestMapping(value = "/getEmpById/{empId}", method = RequestMethod.GET)
-//    @ResponseBody
-//    public JsonMsg getEmpById(@PathVariable("empId") Integer empId){
-//        Employee employee = employeeService.getEmpById(empId);
-//        if (employee != null){
-//            return JsonMsg.success().addInfo("employee", employee);
-//        }else {
-//            return JsonMsg.fail();
-//        }
-//
-//    }
+    @RequestMapping(value = "/getDeviceById/{deviceId}", method = RequestMethod.GET)
+    @ResponseBody
+    public JsonMsg getEmpById(@PathVariable("deviceId") Integer deviceId){
+        Device device = devicesService.getDeviceById(deviceId);
+        if (device != null){
+            return JsonMsg.success().addInfo("device", device);
+        }else {
+            return JsonMsg.fail();
+        }
+
+    }
+
     /**
      * 查询
      * @param pageNo 查询指定页码包含的数据

@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <title>系统更改页面</title>
@@ -54,7 +55,7 @@
                     var firesystemData = result.extendInfo.firesystem;
                     //回显
                     $("#update_firesystemName").val(firesystemData.name);
-                    $("#update_firesystemLeader").val(firesystemData.note);
+                    $("#update_firesystemNote").val(firesystemData.note);
                 }else {
                     alert(result.extendInfo.get_firesystem_error);
                 }

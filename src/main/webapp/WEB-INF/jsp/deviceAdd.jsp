@@ -5,7 +5,7 @@
     <title>设备新增页面</title>
 </head>
 <body>
-<div class="modal fade dept-add-modal" tabindex="-1" role="dialog" aria-labelledby="device-add-modal">
+<div class="modal fade device-add-modal" tabindex="-1" role="dialog" aria-labelledby="device-add-modal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -17,7 +17,8 @@
                     <div class="form-group">
                         <label for="add_deviceName" class="col-sm-2 control-label">设备名称</label>
                         <div class="col-sm-8">
-                            <input type="text" name="deviceName" class="form-control" id="add_deviceName" placeholder="自动报警系统">
+                            <input type="text" name="name" class="form-control" id="add_deviceName" placeholder="烟雾探测器">
+                            <span id="helpBlock_add_deviceName" class="help-block"></span>
                         </div>
                     </div>
                     <div class="form-group">
@@ -36,6 +37,12 @@
                             <input type="text" name="note" class="form-control" id="add_note" placeholder="XXX">
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label for="add_img" class="col-sm-2 control-label">设备缩略图</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="img" class="form-control" id="add_img" placeholder="XXX">
+                        </div>
+                    </div>
                 </form>
             </div>
             <div class="modal-footer">
@@ -47,20 +54,20 @@
 </div><!-- /.modal -->
 
 <script type="text/javascript">
-    <!-------------------------------------员工新增操作-------------------------------------->
+    <!-------------------------------------设备新增操作-------------------------------------->
     //=======0 点击 员工新增按钮，发送AJAX请求查询部门列表信息，弹出模态框，
     // 将查询得到的部门列表信息显示在对应模态框中部门信息处。=============================
     $(".device_add_btn").click(function () {
 
         $.ajax({
-            url:"/hrms/dept/getDeptName",
+            url:"/fire/firesystem/getAllFiresystem",
             type:"GET",
             success:function (result) {
                 if (result.code == 100){
-                    $("#add_department").empty();
-                    $.each(result.extendInfo.departmentList, function () {
-                        var optionEle = $("<option></option>").append(this.deptName).attr("value", this.deptId);
-                        optionEle.appendTo("#add_department");
+                    $("#add_firesystem").empty();
+                    $.each(result.extendInfo.firesystems, function () {
+                        var optionEle = $("<option></option>").append(this.name).attr("value", this.id);
+                        optionEle.appendTo("#add_firesystem");
 
                     });
                 }
@@ -68,30 +75,30 @@
         });
 
         //激活模态框
-        $('.emp-add-modal').modal({
+        $('.device-add-modal').modal({
             backdrop:static,
             keyboard:true
         });
     });
 
     //=========1 当鼠标从姓名输入框移开的时候，判断姓名输入框内的姓名是否重复 ============
-    $("#add_inputName").change(function () {
-        var empName = $("#add_inputName").val();
+    $("#add_deviceName").change(function () {
+        var deviceName = $("#add_deviceName").val();
         $.ajax({
-            url:"/hrms/emp/checkEmpExists",
+            url:"/fire/device/checkDeviceExists",
             type:"GET",
-            data:"empName="+empName,
+            data:"deviceName="+deviceName,
             success:function (result) {
                 if (result.code == 100){
-                    $("#add_inputName").parent().parent().removeClass("has-error");
-                    $("#add_inputName").parent().parent().addClass("has-success");
-                    $("#helpBlock_add_inputName").text("用户名可用！");
-                    $(".emp_save_btn").attr("btn_name_exists", "success");
+                    $("#add_deviceName").parent().parent().removeClass("has-error");
+                    $("#add_deviceName").parent().parent().addClass("has-success");
+                    $("#helpBlock_add_deviceName").text("用户名可用！");
+                    $(".device_save_btn").attr("btn_name_exists", "success");
                 }else {
-                    $("#add_inputName").parent().parent().removeClass("has-success");
-                    $("#add_inputName").parent().parent().addClass("has-error");
-                    $("#helpBlock_add_inputName").text(result.extendInfo.name_reg_error);
-                    $(".emp_save_btn").attr("btn_name_exists", "error");
+                    $("#add_deviceName").parent().parent().removeClass("has-success");
+                    $("#add_deviceName").parent().parent().addClass("has-error");
+                    $("#helpBlock_add_deviceName").text(result.extendInfo.name_reg_error);
+                    $(".device_save_btn").attr("btn_name_exists", "error");
                 }
             }
         });
@@ -99,63 +106,47 @@
 
     //3 保存
 
-    $(".emp_save_btn").click(function () {
+    $(".device_save_btn").click(function () {
 
         //1 获取到第3步：$(".emp_save_btn").attr("btn_name_exists", "success");中btn_name_exists的值
         // btn_name_exists = error，就是姓名重复
-        if($(".emp_save_btn").attr("btn_name_exists") == "error"){
+        if($(".device_save_btn").attr("btn_name_exists") == "error"){
             return false;
         }
 
         //================2 对输入的姓名和邮箱格式进行验证===============
-        var inputName = $("#add_inputName").val();
-        var inputEmail = $("#add_inputEmail").val();
+        var deviceName = $("#add_deviceName").val();
         //验证格式。姓名：2-5位中文或6-16位英文和数字组合；
-        var regName = /(^[a-zA-Z0-9_-]{3,16}$)|(^[\u4E00-\u9FA5]{2,5})/;
-        var regEmail = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
-        if (!regName.test(inputName)){
+        var regName = /(^[a-zA-Z0-9_-]{6,16}$)|(^[\u4E00-\u9FA5]{2,20})/;
+        if (!regName.test(deviceName)){
             alert("测试：输入姓名格式不正确！");
             //输入框变红
-            $("#add_inputName").parent().parent().addClass("has-error");
+            $("#add_deviceName").parent().parent().addClass("has-error");
             //输入框下面显示红色提示信息
-            $("#helpBlock_add_inputName").text("输入姓名为2-5位中文或6-16位英文和数字组合");
+            $("#helpBlock_add_deviceName").text("输入姓名为2-20位中文或6-16位英文和数字组合");
             return false;
         }else {
             //移除格式
-            $("#add_inputName").parent().parent().removeClass("has-error");
-            $("#add_inputName").parent().parent().addClass("has-success");
-            $("#helpBlock_add_inputName").hide();
+            $("#add_deviceName").parent().parent().removeClass("has-error");
+            $("#add_deviceName").parent().parent().addClass("has-success");
+            $("#helpBlock_add_deviceName").hide();
         }
-        if (!regEmail.test(inputEmail)){
-            //输入框变红
-            $("#add_inputEmail").parent().parent().addClass("has-error");
-            //输入框下面显示红色提示信息
-            $("#helpBlock_add_inputEmail").text("输入邮箱格式不正确！");
-            return false;
-        }else {
-            //移除格式
-            $("#add_inputEmail").parent().parent().removeClass("has-error");
-            $("#add_inputName").parent().parent().addClass("has-success");
-            $("#helpBlock_add_inputEmail").hide();
-        }
-
-
 
         $.ajax({
-            url:"/hrms/emp/addEmp",
+            url:"/fire/device/addDevice",
             type:"POST",
-            data:$(".add_emp_form").serialize(),
+            data:$(".add_device_form").serialize(),
             success:function (result) {
                 if (result.code == 100){
-                    alert("员工新增成功");
-                    $('#emp-add-modal').modal("hide");
+                    alert("设备新增成功");
+                    $('#device-add-modal').modal("hide");
                     //跳往最后一页，由于新增记录，所以要重新查询总页数
                     $.ajax({
-                        url:"/hrms/emp/getTotalPages",
+                        url:"/fire/device/getTotalPages",
                         type:"GET",
                         success:function (result) {
                             var totalPage = result.extendInfo.totalPages;
-                            window.location.href="/hrms/emp/getEmpList?pageNo="+totalPage;
+                            window.location.href="/fire/device/getDeviceList?pageNo="+totalPage;
                         }
                     })
                 } else {
@@ -166,7 +157,6 @@
         });
 
     });
-
 </script>
 </body>
 </html>

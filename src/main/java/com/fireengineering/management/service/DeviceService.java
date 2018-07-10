@@ -14,4 +14,8 @@ public interface DeviceService {
     public int deleteDeviceById(Integer deviceId);
 
     public int addDevice(Device device);
+
+    public Device getDeviceByName(String deviceName);
+
+    public int updateDeviceById(Device device);
 }
