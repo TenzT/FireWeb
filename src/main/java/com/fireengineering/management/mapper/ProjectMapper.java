@@ -27,4 +27,8 @@ public interface ProjectMapper {
     int updateByPrimaryKeySelective(Project record);
 
     int updateByPrimaryKey(Project record);
+
+    Project selectByName(@Param("projectName") String projectName);
+
+    List<Project> selectByLimitAndOffset(@Param("offset")Integer offset, @Param("limit")Integer limit);
 }

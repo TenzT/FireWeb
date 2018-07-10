@@ -9,7 +9,7 @@ public class User {
 
     private String authority;
 
-    private String desc;
+    private String note;
 
     private String username;
 
@@ -47,12 +47,12 @@ public class User {
         this.authority = authority == null ? null : authority.trim();
     }
 
-    public String getDesc() {
-        return desc;
+    public String getNote() {
+        return note;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc == null ? null : desc.trim();
+    public void setNote(String note) {
+        this.note = note == null ? null : note.trim();
     }
 
     public String getUsername() {

@@ -224,73 +224,213 @@ public class DeploymentExample {
             return (Criteria) this;
         }
 
-        public Criteria andLocationIsNull() {
-            addCriterion("location is null");
+        public Criteria andAreaIsNull() {
+            addCriterion("area is null");
             return (Criteria) this;
         }
 
-        public Criteria andLocationIsNotNull() {
-            addCriterion("location is not null");
+        public Criteria andAreaIsNotNull() {
+            addCriterion("area is not null");
             return (Criteria) this;
         }
 
-        public Criteria andLocationEqualTo(String value) {
-            addCriterion("location =", value, "location");
+        public Criteria andAreaEqualTo(String value) {
+            addCriterion("area =", value, "area");
             return (Criteria) this;
         }
 
-        public Criteria andLocationNotEqualTo(String value) {
-            addCriterion("location <>", value, "location");
+        public Criteria andAreaNotEqualTo(String value) {
+            addCriterion("area <>", value, "area");
             return (Criteria) this;
         }
 
-        public Criteria andLocationGreaterThan(String value) {
-            addCriterion("location >", value, "location");
+        public Criteria andAreaGreaterThan(String value) {
+            addCriterion("area >", value, "area");
             return (Criteria) this;
         }
 
-        public Criteria andLocationGreaterThanOrEqualTo(String value) {
-            addCriterion("location >=", value, "location");
+        public Criteria andAreaGreaterThanOrEqualTo(String value) {
+            addCriterion("area >=", value, "area");
             return (Criteria) this;
         }
 
-        public Criteria andLocationLessThan(String value) {
-            addCriterion("location <", value, "location");
+        public Criteria andAreaLessThan(String value) {
+            addCriterion("area <", value, "area");
             return (Criteria) this;
         }
 
-        public Criteria andLocationLessThanOrEqualTo(String value) {
-            addCriterion("location <=", value, "location");
+        public Criteria andAreaLessThanOrEqualTo(String value) {
+            addCriterion("area <=", value, "area");
             return (Criteria) this;
         }
 
-        public Criteria andLocationLike(String value) {
-            addCriterion("location like", value, "location");
+        public Criteria andAreaLike(String value) {
+            addCriterion("area like", value, "area");
             return (Criteria) this;
         }
 
-        public Criteria andLocationNotLike(String value) {
-            addCriterion("location not like", value, "location");
+        public Criteria andAreaNotLike(String value) {
+            addCriterion("area not like", value, "area");
             return (Criteria) this;
         }
 
-        public Criteria andLocationIn(List<String> values) {
-            addCriterion("location in", values, "location");
+        public Criteria andAreaIn(List<String> values) {
+            addCriterion("area in", values, "area");
             return (Criteria) this;
         }
 
-        public Criteria andLocationNotIn(List<String> values) {
-            addCriterion("location not in", values, "location");
+        public Criteria andAreaNotIn(List<String> values) {
+            addCriterion("area not in", values, "area");
             return (Criteria) this;
         }
 
-        public Criteria andLocationBetween(String value1, String value2) {
-            addCriterion("location between", value1, value2, "location");
+        public Criteria andAreaBetween(String value1, String value2) {
+            addCriterion("area between", value1, value2, "area");
             return (Criteria) this;
         }
 
-        public Criteria andLocationNotBetween(String value1, String value2) {
-            addCriterion("location not between", value1, value2, "location");
+        public Criteria andAreaNotBetween(String value1, String value2) {
+            addCriterion("area not between", value1, value2, "area");
+            return (Criteria) this;
+        }
+
+        public Criteria andBuildingIsNull() {
+            addCriterion("building is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBuildingIsNotNull() {
+            addCriterion("building is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBuildingEqualTo(String value) {
+            addCriterion("building =", value, "building");
+            return (Criteria) this;
+        }
+
+        public Criteria andBuildingNotEqualTo(String value) {
+            addCriterion("building <>", value, "building");
+            return (Criteria) this;
+        }
+
+        public Criteria andBuildingGreaterThan(String value) {
+            addCriterion("building >", value, "building");
+            return (Criteria) this;
+        }
+
+        public Criteria andBuildingGreaterThanOrEqualTo(String value) {
+            addCriterion("building >=", value, "building");
+            return (Criteria) this;
+        }
+
+        public Criteria andBuildingLessThan(String value) {
+            addCriterion("building <", value, "building");
+            return (Criteria) this;
+        }
+
+        public Criteria andBuildingLessThanOrEqualTo(String value) {
+            addCriterion("building <=", value, "building");
+            return (Criteria) this;
+        }
+
+        public Criteria andBuildingLike(String value) {
+            addCriterion("building like", value, "building");
+            return (Criteria) this;
+        }
+
+        public Criteria andBuildingNotLike(String value) {
+            addCriterion("building not like", value, "building");
+            return (Criteria) this;
+        }
+
+        public Criteria andBuildingIn(List<String> values) {
+            addCriterion("building in", values, "building");
+            return (Criteria) this;
+        }
+
+        public Criteria andBuildingNotIn(List<String> values) {
+            addCriterion("building not in", values, "building");
+            return (Criteria) this;
+        }
+
+        public Criteria andBuildingBetween(String value1, String value2) {
+            addCriterion("building between", value1, value2, "building");
+            return (Criteria) this;
+        }
+
+        public Criteria andBuildingNotBetween(String value1, String value2) {
+            addCriterion("building not between", value1, value2, "building");
+            return (Criteria) this;
+        }
+
+        public Criteria andFloorIsNull() {
+            addCriterion("floor is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andFloorIsNotNull() {
+            addCriterion("floor is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andFloorEqualTo(String value) {
+            addCriterion("floor =", value, "floor");
+            return (Criteria) this;
+        }
+
+        public Criteria andFloorNotEqualTo(String value) {
+            addCriterion("floor <>", value, "floor");
+            return (Criteria) this;
+        }
+
+        public Criteria andFloorGreaterThan(String value) {
+            addCriterion("floor >", value, "floor");
+            return (Criteria) this;
+        }
+
+        public Criteria andFloorGreaterThanOrEqualTo(String value) {
+            addCriterion("floor >=", value, "floor");
+            return (Criteria) this;
+        }
+
+        public Criteria andFloorLessThan(String value) {
+            addCriterion("floor <", value, "floor");
+            return (Criteria) this;
+        }
+
+        public Criteria andFloorLessThanOrEqualTo(String value) {
+            addCriterion("floor <=", value, "floor");
+            return (Criteria) this;
+        }
+
+        public Criteria andFloorLike(String value) {
+            addCriterion("floor like", value, "floor");
+            return (Criteria) this;
+        }
+
+        public Criteria andFloorNotLike(String value) {
+            addCriterion("floor not like", value, "floor");
+            return (Criteria) this;
+        }
+
+        public Criteria andFloorIn(List<String> values) {
+            addCriterion("floor in", values, "floor");
+            return (Criteria) this;
+        }
+
+        public Criteria andFloorNotIn(List<String> values) {
+            addCriterion("floor not in", values, "floor");
+            return (Criteria) this;
+        }
+
+        public Criteria andFloorBetween(String value1, String value2) {
+            addCriterion("floor between", value1, value2, "floor");
+            return (Criteria) this;
+        }
+
+        public Criteria andFloorNotBetween(String value1, String value2) {
+            addCriterion("floor not between", value1, value2, "floor");
             return (Criteria) this;
         }
 

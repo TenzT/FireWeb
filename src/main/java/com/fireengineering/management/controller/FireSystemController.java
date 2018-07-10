@@ -19,15 +19,15 @@ public class FireSystemController {
 
     /**
      * 删除
-     * @param systemId
+     * @param sysId
      * @return
      */
     @RequestMapping(value = "/delFireSystem/{sysId}", method = RequestMethod.DELETE)
     @ResponseBody
-    public JsonMsg deleteDept(@PathVariable("sysId") Integer deptId){
+    public JsonMsg deleteDept(@PathVariable("sysId") Integer sysId){
         int res = 0;
-        if (deptId > 0){
-            res = firesystemService.deleteFiresystemById(deptId);
+        if (sysId > 0){
+            res = firesystemService.deleteFiresystemById(sysId);
         }
         if (res != 1){
             return JsonMsg.fail().addInfo("del_sys_error", "删除异常");
@@ -36,7 +36,7 @@ public class FireSystemController {
     }
 
     /**
-     * 删除所有部门
+     * 删除所有系统
      */
 //    @RequestMapping(value = "/clearAllDept", method = RequestMethod.GET)
 //    public String clearAllDept(){
@@ -45,7 +45,7 @@ public class FireSystemController {
 //    }
 
     /**
-     * 部门更改
+     * 系统更改
      * @param firesystemId
      * @param firesystem
      * @return
@@ -60,7 +60,7 @@ public class FireSystemController {
             res = firesystemService.updateFiresystemById(firesystem);
         }
         if (res != 1){
-            return JsonMsg.fail().addInfo("update_dept_error", "部门更新失败");
+            return JsonMsg.fail().addInfo("update_dept_error", "系统更新失败");
         }
         return JsonMsg.success();
     }
@@ -164,7 +164,7 @@ public class FireSystemController {
     }
 
     /**
-     * 查询所有部门
+     * 查询所有系统
      * @return
      */
     @RequestMapping(value = "/getAllFiresystem", method = RequestMethod.GET)

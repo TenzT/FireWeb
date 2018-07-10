@@ -63,23 +63,26 @@
 </div>
 <script type="text/javascript">
     //CSS的写法：根据 class 选择元素，并用.click(function)来监听
-    //跳转到员工页面
+    //跳转到工作页面
     $(".work_mode").click(function () {
         $(this).attr("href", "/fire/emp/getEmpList");
     });
-    //跳转到部门页面
+    //跳转到设备页面
     $(".device_management").click(function () {
         $(this).attr("href", "/fire/device/getDeviceList");
     });
-    //员工清零
+    //跳转到系统页面
     $(".system_management").click(function () {
         $(this).attr("href", "/fire/firesystem/getFiresystemList");
     });
     //部门清零这个功能暂未实现
-    $(".dept_clearall_btn").click(function () {
-        if (confirm("确认删除所有部门信息吗？")){
-            $(this).attr("href", "/fire/dept/clearAllDept");
-        }
+    $(".project_management").click(function () {
+        $(this).attr("href", "/fire/project/getProjectList");
+    });
+
+    //人员管理这个功能暂未实现
+    $(".user_management").click(function () {
+        $(this).attr("href", "/fire/user/getUserList");
     });
 </script>
 </body>

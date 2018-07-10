@@ -5,7 +5,11 @@ public class Deployment {
 
     private Integer projectId;
 
-    private String location;
+    private String area;
+
+    private String building;
+
+    private String floor;
 
     private Integer spotId;
 
@@ -27,12 +31,28 @@ public class Deployment {
         this.projectId = projectId;
     }
 
-    public String getLocation() {
-        return location;
+    public String getArea() {
+        return area;
     }
 
-    public void setLocation(String location) {
-        this.location = location == null ? null : location.trim();
+    public void setArea(String area) {
+        this.area = area == null ? null : area.trim();
+    }
+
+    public String getBuilding() {
+        return building;
+    }
+
+    public void setBuilding(String building) {
+        this.building = building == null ? null : building.trim();
+    }
+
+    public String getFloor() {
+        return floor;
+    }
+
+    public void setFloor(String floor) {
+        this.floor = floor == null ? null : floor.trim();
     }
 
     public Integer getSpotId() {

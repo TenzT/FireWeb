@@ -4,7 +4,9 @@
   <resultMap id="BaseResultMap" type="com.fireengineering.management.po.Deployment" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="project_id" property="projectId" jdbcType="INTEGER" />
-    <result column="location" property="location" jdbcType="VARCHAR" />
+    <result column="area" property="area" jdbcType="VARCHAR" />
+    <result column="building" property="building" jdbcType="VARCHAR" />
+    <result column="floor" property="floor" jdbcType="VARCHAR" />
     <result column="spot_id" property="spotId" jdbcType="INTEGER" />
     <result column="note" property="note" jdbcType="VARCHAR" />
   </resultMap>
@@ -67,7 +69,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, project_id, location, spot_id, note
+    id, project_id, area, building, floor, spot_id, note
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.fireengineering.management.po.DeploymentExample" >
     select
@@ -100,10 +102,12 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.fireengineering.management.po.Deployment" >
-    insert into deployment (id, project_id, location, 
-      spot_id, note)
-    values (#{id,jdbcType=INTEGER}, #{projectId,jdbcType=INTEGER}, #{location,jdbcType=VARCHAR}, 
-      #{spotId,jdbcType=INTEGER}, #{note,jdbcType=VARCHAR})
+    insert into deployment (id, project_id, area, 
+      building, floor, spot_id, 
+      note)
+    values (#{id,jdbcType=INTEGER}, #{projectId,jdbcType=INTEGER}, #{area,jdbcType=VARCHAR}, 
+      #{building,jdbcType=VARCHAR}, #{floor,jdbcType=VARCHAR}, #{spotId,jdbcType=INTEGER}, 
+      #{note,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.fireengineering.management.po.Deployment" >
     insert into deployment
@@ -114,8 +118,14 @@
       <if test="projectId != null" >
         project_id,
       </if>
-      <if test="location != null" >
-        location,
+      <if test="area != null" >
+        area,
+      </if>
+      <if test="building != null" >
+        building,
+      </if>
+      <if test="floor != null" >
+        floor,
       </if>
       <if test="spotId != null" >
         spot_id,
@@ -131,8 +141,14 @@
       <if test="projectId != null" >
         #{projectId,jdbcType=INTEGER},
       </if>
-      <if test="location != null" >
-        #{location,jdbcType=VARCHAR},
+      <if test="area != null" >
+        #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="building != null" >
+        #{building,jdbcType=VARCHAR},
+      </if>
+      <if test="floor != null" >
+        #{floor,jdbcType=VARCHAR},
       </if>
       <if test="spotId != null" >
         #{spotId,jdbcType=INTEGER},
@@ -157,8 +173,14 @@
       <if test="record.projectId != null" >
         project_id = #{record.projectId,jdbcType=INTEGER},
       </if>
-      <if test="record.location != null" >
-        location = #{record.location,jdbcType=VARCHAR},
+      <if test="record.area != null" >
+        area = #{record.area,jdbcType=VARCHAR},
+      </if>
+      <if test="record.building != null" >
+        building = #{record.building,jdbcType=VARCHAR},
+      </if>
+      <if test="record.floor != null" >
+        floor = #{record.floor,jdbcType=VARCHAR},
       </if>
       <if test="record.spotId != null" >
         spot_id = #{record.spotId,jdbcType=INTEGER},
@@ -175,7 +197,9 @@
     update deployment
     set id = #{record.id,jdbcType=INTEGER},
       project_id = #{record.projectId,jdbcType=INTEGER},
-      location = #{record.location,jdbcType=VARCHAR},
+      area = #{record.area,jdbcType=VARCHAR},
+      building = #{record.building,jdbcType=VARCHAR},
+      floor = #{record.floor,jdbcType=VARCHAR},
       spot_id = #{record.spotId,jdbcType=INTEGER},
       note = #{record.note,jdbcType=VARCHAR}
     <if test="_parameter != null" >
@@ -188,8 +212,14 @@
       <if test="projectId != null" >
         project_id = #{projectId,jdbcType=INTEGER},
       </if>
-      <if test="location != null" >
-        location = #{location,jdbcType=VARCHAR},
+      <if test="area != null" >
+        area = #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="building != null" >
+        building = #{building,jdbcType=VARCHAR},
+      </if>
+      <if test="floor != null" >
+        floor = #{floor,jdbcType=VARCHAR},
       </if>
       <if test="spotId != null" >
         spot_id = #{spotId,jdbcType=INTEGER},
@@ -203,7 +233,9 @@
   <update id="updateByPrimaryKey" parameterType="com.fireengineering.management.po.Deployment" >
     update deployment
     set project_id = #{projectId,jdbcType=INTEGER},
-      location = #{location,jdbcType=VARCHAR},
+      area = #{area,jdbcType=VARCHAR},
+      building = #{building,jdbcType=VARCHAR},
+      floor = #{floor,jdbcType=VARCHAR},
       spot_id = #{spotId,jdbcType=INTEGER},
       note = #{note,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
