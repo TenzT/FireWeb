@@ -1,15 +1,17 @@
 package com.fireengineering.management.po;
 
+import java.util.Date;
+
 public class Maintenance {
     private Integer id;
 
     private String userId;
 
-    private String deviceId;
-
     private String deploymentId;
 
     private String record;
+
+    private Date date;
 
     private String note;
 
@@ -29,14 +31,6 @@ public class Maintenance {
         this.userId = userId == null ? null : userId.trim();
     }
 
-    public String getDeviceId() {
-        return deviceId;
-    }
-
-    public void setDeviceId(String deviceId) {
-        this.deviceId = deviceId == null ? null : deviceId.trim();
-    }
-
     public String getDeploymentId() {
         return deploymentId;
     }
@@ -51,6 +45,14 @@ public class Maintenance {
 
     public void setRecord(String record) {
         this.record = record == null ? null : record.trim();
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public String getNote() {

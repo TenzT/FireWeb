@@ -4,9 +4,9 @@
   <resultMap id="BaseResultMap" type="com.fireengineering.management.po.Maintenance" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="user_id" property="userId" jdbcType="VARCHAR" />
-    <result column="device_id" property="deviceId" jdbcType="VARCHAR" />
     <result column="deployment_id" property="deploymentId" jdbcType="VARCHAR" />
     <result column="record" property="record" jdbcType="VARCHAR" />
+    <result column="date" property="date" jdbcType="DATE" />
     <result column="note" property="note" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -68,7 +68,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, user_id, device_id, deployment_id, record, note
+    id, user_id, deployment_id, record, date, note
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.fireengineering.management.po.MaintenanceExample" >
     select
@@ -101,12 +101,10 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.fireengineering.management.po.Maintenance" >
-    insert into maintenance (id, user_id, device_id, 
-      deployment_id, record, note
-      )
-    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=VARCHAR}, #{deviceId,jdbcType=VARCHAR}, 
-      #{deploymentId,jdbcType=VARCHAR}, #{record,jdbcType=VARCHAR}, #{note,jdbcType=VARCHAR}
-      )
+    insert into maintenance (id, user_id, deployment_id, 
+      record, date, note)
+    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=VARCHAR}, #{deploymentId,jdbcType=VARCHAR}, 
+      #{record,jdbcType=VARCHAR}, #{date,jdbcType=DATE}, #{note,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.fireengineering.management.po.Maintenance" >
     insert into maintenance
@@ -117,14 +115,14 @@
       <if test="userId != null" >
         user_id,
       </if>
-      <if test="deviceId != null" >
-        device_id,
-      </if>
       <if test="deploymentId != null" >
         deployment_id,
       </if>
       <if test="record != null" >
         record,
+      </if>
+      <if test="date != null" >
+        date,
       </if>
       <if test="note != null" >
         note,
@@ -137,14 +135,14 @@
       <if test="userId != null" >
         #{userId,jdbcType=VARCHAR},
       </if>
-      <if test="deviceId != null" >
-        #{deviceId,jdbcType=VARCHAR},
-      </if>
       <if test="deploymentId != null" >
         #{deploymentId,jdbcType=VARCHAR},
       </if>
       <if test="record != null" >
         #{record,jdbcType=VARCHAR},
+      </if>
+      <if test="date != null" >
+        #{date,jdbcType=DATE},
       </if>
       <if test="note != null" >
         #{note,jdbcType=VARCHAR},
@@ -166,14 +164,14 @@
       <if test="record.userId != null" >
         user_id = #{record.userId,jdbcType=VARCHAR},
       </if>
-      <if test="record.deviceId != null" >
-        device_id = #{record.deviceId,jdbcType=VARCHAR},
-      </if>
       <if test="record.deploymentId != null" >
         deployment_id = #{record.deploymentId,jdbcType=VARCHAR},
       </if>
       <if test="record.record != null" >
         record = #{record.record,jdbcType=VARCHAR},
+      </if>
+      <if test="record.date != null" >
+        date = #{record.date,jdbcType=DATE},
       </if>
       <if test="record.note != null" >
         note = #{record.note,jdbcType=VARCHAR},
@@ -187,9 +185,9 @@
     update maintenance
     set id = #{record.id,jdbcType=INTEGER},
       user_id = #{record.userId,jdbcType=VARCHAR},
-      device_id = #{record.deviceId,jdbcType=VARCHAR},
       deployment_id = #{record.deploymentId,jdbcType=VARCHAR},
       record = #{record.record,jdbcType=VARCHAR},
+      date = #{record.date,jdbcType=DATE},
       note = #{record.note,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -201,14 +199,14 @@
       <if test="userId != null" >
         user_id = #{userId,jdbcType=VARCHAR},
       </if>
-      <if test="deviceId != null" >
-        device_id = #{deviceId,jdbcType=VARCHAR},
-      </if>
       <if test="deploymentId != null" >
         deployment_id = #{deploymentId,jdbcType=VARCHAR},
       </if>
       <if test="record != null" >
         record = #{record,jdbcType=VARCHAR},
+      </if>
+      <if test="date != null" >
+        date = #{date,jdbcType=DATE},
       </if>
       <if test="note != null" >
         note = #{note,jdbcType=VARCHAR},
@@ -219,9 +217,9 @@
   <update id="updateByPrimaryKey" parameterType="com.fireengineering.management.po.Maintenance" >
     update maintenance
     set user_id = #{userId,jdbcType=VARCHAR},
-      device_id = #{deviceId,jdbcType=VARCHAR},
       deployment_id = #{deploymentId,jdbcType=VARCHAR},
       record = #{record,jdbcType=VARCHAR},
+      date = #{date,jdbcType=DATE},
       note = #{note,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>

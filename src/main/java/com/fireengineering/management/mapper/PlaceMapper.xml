@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.fireengineering.management.mapper.DeploymentMapper" >
-  <resultMap id="BaseResultMap" type="com.fireengineering.management.po.Deployment" >
+<mapper namespace="com.fireengineering.management.mapper.PlaceMapper" >
+  <resultMap id="BaseResultMap" type="com.fireengineering.management.po.Place" >
     <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="device_id" property="deviceId" jdbcType="INTEGER" />
-    <result column="place_id" property="placeId" jdbcType="INTEGER" />
-    <result column="spot_id" property="spotId" jdbcType="INTEGER" />
-    <result column="QRCode" property="qrcode" jdbcType="VARCHAR" />
+    <result column="project_id" property="projectId" jdbcType="INTEGER" />
+    <result column="district" property="district" jdbcType="VARCHAR" />
+    <result column="building" property="building" jdbcType="VARCHAR" />
+    <result column="floor" property="floor" jdbcType="VARCHAR" />
     <result column="note" property="note" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="PlaceProjectMap" type="com.fireengineering.management.po.Place" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="district" property="district" jdbcType="VARCHAR" />
+    <result column="building" property="building" jdbcType="INTEGER" />
+    <result column="floor" property="floor" jdbcType="VARCHAR" />
+    <association property="project" javaType="com.fireengineering.management.po.Project">
+      <!--<id column="fid" property="id"></id>-->
+      <result column="pname" property="name"></result>
+    </association>
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -68,15 +78,29 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, device_id, place_id, spot_id, QRCode, note
+    id, project_id, district, building, floor, note
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.fireengineering.management.po.DeploymentExample" >
+
+  <select id="selectByLimitAndOffset" resultMap="PlaceProjectMap">
+    select project.name pname, place.*
+    from place, project
+    where place.project_id=project.id
+    limit #{offset}, #{limit}
+  </select>
+  <select id="selectByName" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from place
+    where name=#{placeName}
+  </select>
+
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.fireengineering.management.po.PlaceExample" >
     select
     <if test="distinct" >
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from deployment
+    from place
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -87,44 +111,44 @@
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
-    from deployment
+    from place
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from deployment
+    delete from place
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.fireengineering.management.po.DeploymentExample" >
-    delete from deployment
+  <delete id="deleteByExample" parameterType="com.fireengineering.management.po.PlaceExample" >
+    delete from place
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.fireengineering.management.po.Deployment" >
-    insert into deployment (id, device_id, place_id, 
-      spot_id, QRCode, note
+  <insert id="insert" parameterType="com.fireengineering.management.po.Place" >
+    insert into place (id, project_id, district, 
+      building, floor, note
       )
-    values (#{id,jdbcType=INTEGER}, #{deviceId,jdbcType=INTEGER}, #{placeId,jdbcType=INTEGER}, 
-      #{spotId,jdbcType=INTEGER}, #{qrcode,jdbcType=VARCHAR}, #{note,jdbcType=VARCHAR}
+    values (#{id,jdbcType=INTEGER}, #{projectId,jdbcType=INTEGER}, #{district,jdbcType=VARCHAR}, 
+      #{building,jdbcType=VARCHAR}, #{floor,jdbcType=VARCHAR}, #{note,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.fireengineering.management.po.Deployment" >
-    insert into deployment
+  <insert id="insertSelective" parameterType="com.fireengineering.management.po.Place" >
+    insert into place
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
       </if>
-      <if test="deviceId != null" >
-        device_id,
+      <if test="projectId != null" >
+        project_id,
       </if>
-      <if test="placeId != null" >
-        place_id,
+      <if test="district != null" >
+        district,
       </if>
-      <if test="spotId != null" >
-        spot_id,
+      <if test="building != null" >
+        building,
       </if>
-      <if test="qrcode != null" >
-        QRCode,
+      <if test="floor != null" >
+        floor,
       </if>
       <if test="note != null" >
         note,
@@ -134,46 +158,46 @@
       <if test="id != null" >
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="deviceId != null" >
-        #{deviceId,jdbcType=INTEGER},
+      <if test="projectId != null" >
+        #{projectId,jdbcType=INTEGER},
       </if>
-      <if test="placeId != null" >
-        #{placeId,jdbcType=INTEGER},
+      <if test="district != null" >
+        #{district,jdbcType=VARCHAR},
       </if>
-      <if test="spotId != null" >
-        #{spotId,jdbcType=INTEGER},
+      <if test="building != null" >
+        #{building,jdbcType=VARCHAR},
       </if>
-      <if test="qrcode != null" >
-        #{qrcode,jdbcType=VARCHAR},
+      <if test="floor != null" >
+        #{floor,jdbcType=VARCHAR},
       </if>
       <if test="note != null" >
         #{note,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.fireengineering.management.po.DeploymentExample" resultType="java.lang.Integer" >
-    select count(*) from deployment
+  <select id="countByExample" parameterType="com.fireengineering.management.po.PlaceExample" resultType="java.lang.Integer" >
+    select count(*) from place
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map" >
-    update deployment
+    update place
     <set >
       <if test="record.id != null" >
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.deviceId != null" >
-        device_id = #{record.deviceId,jdbcType=INTEGER},
+      <if test="record.projectId != null" >
+        project_id = #{record.projectId,jdbcType=INTEGER},
       </if>
-      <if test="record.placeId != null" >
-        place_id = #{record.placeId,jdbcType=INTEGER},
+      <if test="record.district != null" >
+        district = #{record.district,jdbcType=VARCHAR},
       </if>
-      <if test="record.spotId != null" >
-        spot_id = #{record.spotId,jdbcType=INTEGER},
+      <if test="record.building != null" >
+        building = #{record.building,jdbcType=VARCHAR},
       </if>
-      <if test="record.qrcode != null" >
-        QRCode = #{record.qrcode,jdbcType=VARCHAR},
+      <if test="record.floor != null" >
+        floor = #{record.floor,jdbcType=VARCHAR},
       </if>
       <if test="record.note != null" >
         note = #{record.note,jdbcType=VARCHAR},
@@ -184,31 +208,31 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map" >
-    update deployment
+    update place
     set id = #{record.id,jdbcType=INTEGER},
-      device_id = #{record.deviceId,jdbcType=INTEGER},
-      place_id = #{record.placeId,jdbcType=INTEGER},
-      spot_id = #{record.spotId,jdbcType=INTEGER},
-      QRCode = #{record.qrcode,jdbcType=VARCHAR},
+      project_id = #{record.projectId,jdbcType=INTEGER},
+      district = #{record.district,jdbcType=VARCHAR},
+      building = #{record.building,jdbcType=VARCHAR},
+      floor = #{record.floor,jdbcType=VARCHAR},
       note = #{record.note,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.fireengineering.management.po.Deployment" >
-    update deployment
+  <update id="updateByPrimaryKeySelective" parameterType="com.fireengineering.management.po.Place" >
+    update place
     <set >
-      <if test="deviceId != null" >
-        device_id = #{deviceId,jdbcType=INTEGER},
+      <if test="projectId != null" >
+        project_id = #{projectId,jdbcType=INTEGER},
       </if>
-      <if test="placeId != null" >
-        place_id = #{placeId,jdbcType=INTEGER},
+      <if test="district != null" >
+        district = #{district,jdbcType=VARCHAR},
       </if>
-      <if test="spotId != null" >
-        spot_id = #{spotId,jdbcType=INTEGER},
+      <if test="building != null" >
+        building = #{building,jdbcType=VARCHAR},
       </if>
-      <if test="qrcode != null" >
-        QRCode = #{qrcode,jdbcType=VARCHAR},
+      <if test="floor != null" >
+        floor = #{floor,jdbcType=VARCHAR},
       </if>
       <if test="note != null" >
         note = #{note,jdbcType=VARCHAR},
@@ -216,12 +240,12 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.fireengineering.management.po.Deployment" >
-    update deployment
-    set device_id = #{deviceId,jdbcType=INTEGER},
-      place_id = #{placeId,jdbcType=INTEGER},
-      spot_id = #{spotId,jdbcType=INTEGER},
-      QRCode = #{qrcode,jdbcType=VARCHAR},
+  <update id="updateByPrimaryKey" parameterType="com.fireengineering.management.po.Place" >
+    update place
+    set project_id = #{projectId,jdbcType=INTEGER},
+      district = #{district,jdbcType=VARCHAR},
+      building = #{building,jdbcType=VARCHAR},
+      floor = #{floor,jdbcType=VARCHAR},
       note = #{note,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>

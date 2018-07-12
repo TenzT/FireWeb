@@ -8,230 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c3d057d-5e75-49ee-99ba-40c42a73b4d1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/impl/ProjectServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/fireengineering/management/service/ProjectServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/projectAdd.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/projectPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/projectUpdate.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/userAdd.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/userPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/controller/DeploymentController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/controller/DeviceController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/controller/FireSystemController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/controller/LoginController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/controller/MaintenanceController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/controller/ProjectController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/mapper/DeploymentMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/mapper/DeploymentMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/mapper/DeviceMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/mapper/DeviceMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/mapper/FiresystemMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/mapper/FiresystemMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/mapper/MaintenanceMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/mapper/MaintenanceMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/mapper/ProjectMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/mapper/ProjectMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/mapper/UserMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/mapper/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/Deployment.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/DeploymentExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/DeploymentExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/DeploymentExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/DeploymentExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/Device.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/DeviceExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/DeviceExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/DeviceExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/DeviceExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/Firesystem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/FiresystemExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/FiresystemExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/FiresystemExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/FiresystemExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/Maintenance.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/MaintenanceExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/MaintenanceExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/MaintenanceExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/MaintenanceExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/Project.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/ProjectExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/ProjectExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/ProjectExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/ProjectExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/UserExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/UserExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/UserExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/po/UserExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/service/DeploymentService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/service/DeviceService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/service/FiresystemService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/service/MaintenanceService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/service/ProjectService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/service/impl/DeviceServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/service/impl/FiresystemServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/service/impl/ProjectServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fireengineering/management/util/JsonMsg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mybatis/sqlMapConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/spring/applicationContext-dao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/spring/applicationContext-service.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/spring/applicationContext-transaction.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/spring/springmvc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/controller/DeploymentController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/controller/DeviceController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/controller/FireSystemController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/controller/LoginController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/controller/MaintenanceController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/controller/ProjectController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/mapper/DeploymentMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/mapper/DeploymentMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/mapper/DeviceMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/mapper/DeviceMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/mapper/FiresystemMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/mapper/FiresystemMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/mapper/MaintenanceMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/mapper/MaintenanceMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/mapper/ProjectMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/mapper/ProjectMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/mapper/UserMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/mapper/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/Deployment.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/DeploymentExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/DeploymentExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/DeploymentExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/DeploymentExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/Device.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/DeviceExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/DeviceExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/DeviceExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/DeviceExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/Firesystem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/FiresystemExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/FiresystemExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/FiresystemExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/FiresystemExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/Maintenance.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/MaintenanceExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/MaintenanceExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/MaintenanceExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/MaintenanceExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/Project.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/ProjectExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/ProjectExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/ProjectExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/ProjectExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/UserExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/UserExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/UserExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/po/UserExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/service/DeploymentService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/service/DeviceService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/service/FiresystemService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/service/MaintenanceService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/service/ProjectService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/service/impl/DeviceServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/service/impl/FiresystemServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/service/impl/ProjectServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/com/fireengineering/management/util/JsonMsg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/mybatis/sqlMapConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/spring/applicationContext-dao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/spring/applicationContext-service.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/spring/applicationContext-transaction.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/classes/spring/springmvc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/jsp/commom/foot.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/jsp/commom/head.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/jsp/commom/leftsidebar.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/jsp/deviceAdd.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/jsp/devicePage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/jsp/deviceUpdate.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/jsp/firesystemAdd.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/jsp/firesystemPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/jsp/firesystemUpdate.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/jsp/main.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/jsp/projectAdd.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/jsp/projectPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/jsp/projectUpdate.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/jsp/userAdd.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/jsp/userPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/aspectjweaver-1.8.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/c3p0-0.9.5.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/commons-dbcp-1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/commons-fileupload-1.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/commons-io-2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/commons-logging-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/commons-pool-1.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/jackson-annotations-2.8.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/jackson-core-2.8.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/jackson-databind-2.8.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/log4j-1.2.17.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/mchange-commons-java-0.2.11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/mybatis-3.4.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/mybatis-generator-core-1.3.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/mybatis-spring-1.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/mysql-connector-java-5.1.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/slf4j-api-1.7.18.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/slf4j-log4j12-1.7.18.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/spring-aop-4.3.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/spring-beans-4.3.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/spring-context-4.3.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/spring-context-support-4.3.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/spring-core-4.3.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/spring-expression-4.3.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/spring-jdbc-4.3.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/spring-oxm-4.3.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/spring-test-4.3.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/spring-tx-4.3.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/spring-web-4.3.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/spring-webmvc-4.3.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/lib/tomcat-servlet-api-7.0.88.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/static/html/departmentPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/static/html/hrms_department.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/static/html/hrms_employee.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/static/html/hrms_foot.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/static/html/hrms_head.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/static/html/hrms_leftsidebar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/static/html/hrms_main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/static/html/leftsidebar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/static/img/company1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/static/img/company2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/static/img/company3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/firefitingmanagement/static/img/logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/fireengineering/management/service/DeviceServiceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/fireengineering/management/service/FireSystemserviceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/fireengineering/management/service/ProjectServiceTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/FireSystemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/FireSystemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/ProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/DeviceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/DeviceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/DeploymentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/DeploymentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/ProjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/ProjectMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/ProjectMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/ProjectMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/MaintenanceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/MaintenanceMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/Deployment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/Deployment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/DeploymentExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/DeploymentExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/UserExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/UserExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/ProjectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/Maintenance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/Maintenance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/MaintenanceExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/MaintenanceExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/com/fireengineering/management/service/DeviceServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/fireengineering/management/service/DeviceServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/commom/leftsidebar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/commom/leftsidebar.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -263,95 +48,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="userPage.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/userPage.jsp">
+      <file leaf-file-name="DeviceMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/DeviceMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="27" column="50" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="50" />
+            <state relative-caret-position="237">
+              <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userAdd.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/userAdd.jsp">
+      <file leaf-file-name="placeAdd.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/placeAdd.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="125" column="22" selection-start-line="125" selection-start-column="22" selection-end-line="125" selection-end-column="22" />
+            <state relative-caret-position="407">
+              <caret line="93" column="16" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="firesystemAdd.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/firesystemAdd.jsp">
+      <file leaf-file-name="PlaceController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/PlaceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-436">
-              <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+            <state relative-caret-position="196">
+              <caret line="111" column="6" selection-start-line="111" selection-start-column="6" selection-end-line="111" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/UserController.java">
+      <file leaf-file-name="placeUpdate.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/placeUpdate.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="93" column="57" selection-start-line="93" selection-start-column="43" selection-end-line="93" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FireSystemController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/FireSystemController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="96" selection-start-line="96" selection-end-line="96" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FiresystemServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/impl/FiresystemServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#625#626#0" expanded="true" />
-                <element signature="e#697#698#0" expanded="true" />
-                <element signature="e#767#768#0" expanded="true" />
-                <element signature="e#837#838#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" selection-start-line="15" selection-end-line="15" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/impl/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="33" column="53" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1030#1031#0" expanded="true" />
-                <element signature="e#1062#1063#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="285">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -369,29 +97,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fire</find>
-      <find>新增</find>
-      <find>系统</find>
-      <find>sys</find>
-      <find>firesystem</find>
-      <find>Firesystem</find>
-      <find>getprojectList</find>
-      <find>project</find>
-      <find>device</find>
-      <find>设备</find>
-      <find>del</find>
-      <find>user_add_btn</find>
-      <find>List</find>
-      <find>删除</find>
-      <find>user_delete_btn</find>
-      <find>delete</find>
-      <find>add_userName</find>
-      <find>btn_name_exists</find>
-      <find>helpBlock_add_userName</find>
-      <find>helpBlock_add_userUsername</find>
-      <find>addFire</find>
-      <find>che</find>
-      <find>check</find>
       <find>reg</find>
       <find>Firesys</find>
       <find>add_userUserName</find>
@@ -399,6 +104,29 @@
       <find>Exis</find>
       <find>重复</find>
       <find>helpBlock_add_firesystemName</find>
+      <find>limit</find>
+      <find>RequestPAram</find>
+      <find>RequestParam</find>
+      <find>select</find>
+      <find>De</find>
+      <find>P</find>
+      <find>备</find>
+      <find>dev</find>
+      <find>add_firesystem</find>
+      <find>add_placeName</find>
+      <find>place_delete_btn</find>
+      <find>add_project</find>
+      <find>getAll</find>
+      <find>device</find>
+      <find>Device</find>
+      <find>设备</find>
+      <find>update_placeName</find>
+      <find>update_note</find>
+      <find>update_img</find>
+      <find>update_placeFloor</find>
+      <find>firesystem</find>
+      <find>Emp</find>
+      <find>addPr</find>
     </findStrings>
     <replaceStrings>
       <replace>firesystem</replace>
@@ -410,11 +138,20 @@
       <replace>Project</replace>
       <replace>项目</replace>
       <replace>getProjectList</replace>
-      <replace>project</replace>
       <replace>user</replace>
       <replace>人员</replace>
       <replace>btn_username_exists</replace>
       <replace>helpBlock_add_userUsername</replace>
+      <replace>add_project</replace>
+      <replace>add_district</replace>
+      <replace>place</replace>
+      <replace>地点</replace>
+      <replace>project</replace>
+      <replace>update_placeDistrict</replace>
+      <replace>update_placeFloor</replace>
+      <replace>update_placeBuilding</replace>
+      <replace>Device</replace>
+      <replace>Place</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -423,18 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/test/com/fireengineering/management/service/impl/DevicesServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/DevicesController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/DevicesService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/impl/DevicesServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/DevicesMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/test/com/fireengineering/management/service/DevicesServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/Devices.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/DevicesMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/Device.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeePage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/commom/deviceAdd.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/Firesystem.java" />
         <option value="$PROJECT_DIR$/src/main/test/com/fireengineering/management/service/FireSystemServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/impl/FireSystemServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/FireSystemService.java" />
@@ -445,14 +170,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/FiresystemMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/commom/fireystemUpdate.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/DeviceMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/DeviceMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/impl/FiresystemServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/deviceAdd.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/deviceUpdate.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/impl/DeviceServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/DeviceController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/DeviceService.java" />
-        <option value="$PROJECT_DIR$/src/main/test/com/fireengineering/management/service/DeviceServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/devicePage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/firesystemPage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/firesystemUpdate.jsp" />
@@ -465,7 +187,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/ProjectController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/projectAdd.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/projectUpdate.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/commom/leftsidebar.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/projectPage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/userPage.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/UserService.java" />
@@ -474,6 +195,22 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/userAdd.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/Deployment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/DeploymentMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/DeviceMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/test/com/fireengineering/management/service/DeviceServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/commom/leftsidebar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/PlaceService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/Place.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/impl/PlaceServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/PlaceMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/test/com/fireengineering/management/service/PlaceServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/PlaceMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/placeAdd.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/placePage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/DeviceController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/PlaceController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/placeUpdate.jsp" />
       </list>
     </option>
   </component>
@@ -510,9 +247,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="47" />
-    <option name="y" value="27" />
-    <option name="width" value="1252" />
+    <option name="x" value="4" />
+    <option name="y" value="23" />
+    <option name="width" value="1212" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -521,6 +258,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -579,26 +319,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="management" type="462c0819:PsiDirectoryNode" />
-              <item name="po" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FireWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FireWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="management" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FireWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FireWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="management" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FireWeb" type="b2602c69:ProjectViewProjectNode" />
@@ -652,9 +373,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -680,7 +398,9 @@
       <recent name="$PROJECT_DIR$/src/main/webapp/static/html" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.fireengineering.management.controller" />
       <recent name="com.fireengineering.management.service.impl" />
+      <recent name="com.fireengineering.management.service" />
       <recent name="com.fireengineering.management.po" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -688,8 +408,8 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper" />
       <recent name="$PROJECT_DIR$/src/main/java/com/fireengineering/management/po" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/commom" />
       <recent name="$PROJECT_DIR$/src/main/webapp/static/html" />
     </key>
@@ -710,7 +430,7 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="DeviceServiceTest.getDeviceByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlaceServiceTest.getPlaceList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FireWeb" />
       <extension name="coverage">
         <pattern>
@@ -721,100 +441,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.fireengineering.management.service" />
-      <option name="MAIN_CLASS_NAME" value="com.fireengineering.management.service.DeviceServiceTest" />
-      <option name="METHOD_NAME" value="getDeviceByName" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="DeviceServiceTest.getDeviceList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FireWeb" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.fireengineering.management.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.fireengineering.management.service" />
-      <option name="MAIN_CLASS_NAME" value="com.fireengineering.management.service.DeviceServiceTest" />
-      <option name="METHOD_NAME" value="getDeviceList" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="FireSystemserviceTest.getAllFiresystemByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FireWeb" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.fireengineering.management.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.fireengineering.management.service" />
-      <option name="MAIN_CLASS_NAME" value="com.fireengineering.management.service.FireSystemserviceTest" />
-      <option name="METHOD_NAME" value="getAllFiresystemByName" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="FireSystemserviceTest.getFiresystemByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FireWeb" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.fireengineering.management.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.fireengineering.management.service" />
-      <option name="MAIN_CLASS_NAME" value="com.fireengineering.management.service.FireSystemserviceTest" />
-      <option name="METHOD_NAME" value="getFiresystemByName" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="ProjectServiceTest.addProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FireWeb" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.fireengineering.management.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.fireengineering.management.service" />
-      <option name="MAIN_CLASS_NAME" value="com.fireengineering.management.service.ProjectServiceTest" />
-      <option name="METHOD_NAME" value="addProject" />
+      <option name="MAIN_CLASS_NAME" value="com.fireengineering.management.service.PlaceServiceTest" />
+      <option name="METHOD_NAME" value="getPlaceList" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1004,19 +632,11 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Tomcat" />
-      <item itemvalue="JUnit.FireSystemserviceTest.getAllFiresystemByName" />
-      <item itemvalue="JUnit.FireSystemserviceTest.getFiresystemByName" />
-      <item itemvalue="JUnit.DeviceServiceTest.getDeviceList" />
-      <item itemvalue="JUnit.DeviceServiceTest.getDeviceByName" />
-      <item itemvalue="JUnit.ProjectServiceTest.addProject" />
+      <item itemvalue="JUnit.PlaceServiceTest.getPlaceList" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ProjectServiceTest.addProject" />
-        <item itemvalue="JUnit.DeviceServiceTest.getDeviceByName" />
-        <item itemvalue="JUnit.DeviceServiceTest.getDeviceList" />
-        <item itemvalue="JUnit.FireSystemserviceTest.getFiresystemByName" />
-        <item itemvalue="JUnit.FireSystemserviceTest.getAllFiresystemByName" />
+        <item itemvalue="JUnit.PlaceServiceTest.getPlaceList" />
       </list>
     </recent_temporary>
   </component>
@@ -1032,53 +652,54 @@
       <updated>1531014053476</updated>
       <workItem from="1531014054849" duration="14674000" />
       <workItem from="1531094500217" duration="43536000" />
-      <workItem from="1531191309609" duration="28537000" />
+      <workItem from="1531191309609" duration="28718000" />
+      <workItem from="1531302954157" duration="1525000" />
+      <workItem from="1531402418012" duration="5356000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FireSystemServiceTest_addFireSystem - 2018.07.09 at 19h 37m 39s.xml">
-      <configuration name="FireSystemServiceTest.addFireSystem" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FireSystemServiceTest_updateFireSystemById - 2018.07.09 at 19h 38m 50s.xml">
-      <configuration name="FireSystemServiceTest.updateFireSystemById" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FireSystemServiceTest_getFireSystemList - 2018.07.09 at 19h 39m 00s.xml">
-      <configuration name="FireSystemServiceTest.getFireSystemList" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FireSystemserviceTest_getFiresystemList - 2018.07.09 at 20h 19m 22s.xml">
-      <configuration name="FireSystemserviceTest.getFiresystemList" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FireSystemserviceTest_getAllFiresystemByName - 2018.07.09 at 22h 32m 50s.xml">
-      <configuration name="FireSystemserviceTest.getAllFiresystemByName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FireSystemserviceTest_getFiresystemByName - 2018.07.10 at 00h 19m 18s.xml">
-      <configuration name="FireSystemserviceTest.getFiresystemByName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FireSystemserviceTest_getFiresystemByName - 2018.07.10 at 00h 20m 33s.xml">
-      <configuration name="FireSystemserviceTest.getFiresystemByName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeviceServiceTest_getDeviceList - 2018.07.10 at 11h 14m 23s.xml">
-      <configuration name="DeviceServiceTest.getDeviceList" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DeviceServiceTest_getDeviceByName - 2018.07.10 at 11h 15m 00s.xml">
       <configuration name="DeviceServiceTest.getDeviceByName" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ProjectServiceTest_addProject - 2018.07.10 at 17h 03m 56s.xml">
       <configuration name="ProjectServiceTest.addProject" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DeviceServiceTest_getDeviceList - 2018.07.11 at 21h 47m 37s.xml">
+      <configuration name="DeviceServiceTest.getDeviceList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeviceServiceTest_getDeviceList - 2018.07.11 at 21h 49m 27s.xml">
+      <configuration name="DeviceServiceTest.getDeviceList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeviceServiceTest_getDeviceCount - 2018.07.11 at 21h 49m 38s.xml">
+      <configuration name="DeviceServiceTest.getDeviceCount" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeviceServiceTest_getDeviceList - 2018.07.11 at 21h 51m 29s.xml">
+      <configuration name="DeviceServiceTest.getDeviceList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeviceServiceTest_addDevice - 2018.07.11 at 21h 52m 01s.xml">
+      <configuration name="DeviceServiceTest.addDevice" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlaceServiceTest_getPlaceList - 2018.07.12 at 22h 01m 20s.xml">
+      <configuration name="PlaceServiceTest.getPlaceList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlaceServiceTest_getPlaceList - 2018.07.12 at 22h 02m 32s.xml">
+      <configuration name="PlaceServiceTest.getPlaceList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlaceServiceTest_getPlaceList - 2018.07.12 at 22h 03m 20s.xml">
+      <configuration name="PlaceServiceTest.getPlaceList" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86747000" />
+    <option name="totallyTimeSpent" value="93809000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="47" y="27" width="1252" height="877" extended-state="0" />
-    <editor active="true" />
+    <frame x="4" y="23" width="1212" height="877" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="9" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32893" />
-      <window_info anchor="right" id="Maven Projects" order="4" weight="0.20417634" />
+      <window_info anchor="right" id="Maven Projects" order="4" visible="true" weight="0.2034188" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
@@ -1086,27 +707,27 @@
       <window_info id="Structure" order="1" sideWeight="0.50097847" side_tool="true" weight="0.22790357" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.2668428" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2668428" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32893" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28797886" />
       <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.18758257" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49902153" visible="true" weight="0.24958678" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49902153" visible="true" weight="0.24700855" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32893" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32949877" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32949877" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
     </layout>
   </component>
@@ -1149,194 +770,21 @@
           <properties />
           <option name="timeStamp" value="38" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/PlaceController.java</url>
+          <line>108</line>
+          <properties />
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="62" />
+      <option name="time" value="63" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/DeviceMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/departmentUpdate.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/Device.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="32" />
-          <folding>
-            <element signature="e#1136#1137#0" expanded="true" />
-            <element signature="e#1180#1181#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/impl/DeviceServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#726#727#0" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-            <element signature="e#1376#1377#0" expanded="true" />
-            <element signature="e#1410#1411#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/deviceUpdate.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="117" column="11" lean-forward="true" selection-start-line="117" selection-start-column="11" selection-end-line="117" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/firesystemPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="102" column="16" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#nav#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/firesystemUpdate.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="84" column="7" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/ProjectMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="84" column="2" selection-start-line="84" selection-start-column="2" selection-end-line="84" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/MaintenanceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/FiresystemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="39" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/ProjectExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/impl/ProjectServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/ProjectService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/DeviceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/com/fireengineering/management/service/DeviceServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="12" selection-start-line="12" selection-end-line="13" selection-end-column="79" />
-          <folding>
-            <element signature="e#1119#1120#0" expanded="true" />
-            <element signature="e#1168#1169#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/com/fireengineering/management/service/ProjectServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/DeploymentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/Deployment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-286" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/DeviceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="146" column="46" lean-forward="true" selection-start-line="146" selection-start-column="46" selection-end-line="146" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/ProjectMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="381">
           <caret line="32" column="101" lean-forward="true" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/FiresystemMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="70" selection-start-line="70" selection-end-line="75" selection-end-column="11" />
-          <folding>
-            <element signature="n#sql#0;n#mapper#0;n#!!top" />
-            <element signature="n#sql#1;n#mapper#0;n#!!top" />
-            <element signature="n#sql#2;n#mapper#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1351,13 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/commom/leftsidebar.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1445,19 +886,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/ProjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="84" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="195">
           <caret line="15" selection-start-line="15" selection-end-line="15" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1481,27 +912,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
+        <state relative-caret-position="315">
           <caret line="33" column="53" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1030#1031#0" expanded="true" />
-            <element signature="e#1062#1063#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/userPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="27" column="50" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/devicePage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="106" column="4" selection-start-line="106" selection-start-column="4" selection-end-line="107" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1521,7 +938,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
+        <state relative-caret-position="1275">
           <caret line="93" column="57" selection-start-line="93" selection-start-column="43" selection-end-line="93" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1531,7 +948,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/FireSystemController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
+        <state relative-caret-position="1320">
           <caret line="96" selection-start-line="96" selection-end-line="96" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1539,10 +956,100 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/firesystemAdd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/userAdd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1935">
+          <caret line="129" column="36" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
+          <folding>
+            <element signature="e#536#543#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/userPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="27" column="50" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/devicePage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1250">
+          <caret line="106" column="4" selection-start-line="106" selection-start-column="4" selection-end-line="107" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/DeviceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="19" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/Deployment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/FiresystemMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="70" selection-start-line="70" selection-end-line="75" selection-end-column="11" />
+          <folding>
+            <element signature="n#sql#0;n#mapper#0;n#!!top" />
+            <element signature="n#sql#1;n#mapper#0;n#!!top" />
+            <element signature="n#sql#2;n#mapper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/DeploymentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/Maintenance.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/commom/leftsidebar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="85" column="54" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/Place.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="66" column="19" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
+          <folding>
+            <element signature="e#1278#1279#0" expanded="true" />
+            <element signature="e#1308#1309#0" expanded="true" />
+            <element signature="e#1355#1356#0" expanded="true" />
+            <element signature="e#1393#1394#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/impl/FiresystemServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        <state relative-caret-position="390">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#625#626#0" expanded="true" />
@@ -1553,17 +1060,140 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/firesystemAdd.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/impl/DeviceServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-436">
-          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        <state relative-caret-position="433">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#726#727#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#1376#1377#0" expanded="true" />
+            <element signature="e#1438#1439#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/userAdd.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/DeviceMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="125" column="22" selection-start-line="125" selection-start-column="22" selection-end-line="125" selection-end-column="22" />
+        <state relative-caret-position="231">
+          <caret line="83" column="10" lean-forward="true" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/po/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/PlaceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/com/fireengineering/management/service/DeviceServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="12" selection-start-line="12" selection-end-line="13" selection-end-column="79" />
+          <folding>
+            <element signature="e#655#656#0" expanded="true" />
+            <element signature="e#721#722#0" expanded="true" />
+            <element signature="e#1119#1120#0" expanded="true" />
+            <element signature="e#1168#1169#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/PlaceMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="32" column="101" selection-start-line="32" selection-start-column="101" selection-end-line="32" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/PlaceMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="16" column="87" selection-start-line="16" selection-start-column="87" selection-end-line="16" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/service/impl/PlaceServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="35" column="49" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/com/fireengineering/management/service/PlaceServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/ProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="168" column="36" selection-start-line="168" selection-start-column="30" selection-end-line="168" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/mapper/DeviceMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/placeAdd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="93" column="16" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/placePage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="107" selection-start-line="107" selection-end-line="107" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/DeviceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="79" column="52" selection-start-line="79" selection-start-column="52" selection-end-line="79" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fireengineering/management/controller/PlaceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="111" column="6" selection-start-line="111" selection-start-column="6" selection-end-line="111" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/placeUpdate.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>

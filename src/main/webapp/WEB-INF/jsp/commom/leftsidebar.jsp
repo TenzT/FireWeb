@@ -46,6 +46,7 @@
                 <li role="presentation"><a href="#" class="device_management">设备管理</a></li>
                 <li role="presentation"><a href="#" class="system_management">消防系统管理</a></li>
                 <li role="presentation"><a href="#" class="project_management">项目管理</a></li>
+                <li role="presentation"><a href="#" class="place_management">地点管理</a></li>
                 <li role="presentation"><a href="#" class="deployment_management">部署管理</a></li>
             </ul>
         </li>
@@ -62,11 +63,7 @@
     </ul>
 </div>
 <script type="text/javascript">
-    //CSS的写法：根据 class 选择元素，并用.click(function)来监听
-    //跳转到工作页面
-    $(".work_mode").click(function () {
-        $(this).attr("href", "/fire/emp/getEmpList");
-    });
+
     //跳转到设备页面
     $(".device_management").click(function () {
         $(this).attr("href", "/fire/device/getDeviceList");
@@ -75,14 +72,18 @@
     $(".system_management").click(function () {
         $(this).attr("href", "/fire/firesystem/getFiresystemList");
     });
-    //部门清零这个功能暂未实现
+    //跳转到项目页面
     $(".project_management").click(function () {
         $(this).attr("href", "/fire/project/getProjectList");
     });
 
-    //人员管理这个功能暂未实现
+    //跳转到用户页面
     $(".user_management").click(function () {
         $(this).attr("href", "/fire/user/getUserList");
+    });
+    //跳转到地点页面
+    $(".place_management").click(function () {
+        $(this).attr("href", "/fire/place/getPlaceList");
     });
 </script>
 </body>

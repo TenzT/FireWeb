@@ -42,7 +42,7 @@ public class DeviceServiceTest {
     @Test
     public void addDevice(){
         Device device = new Device();
-        device.setName("烟雾传感器");
+        device.setName("烟雾");
         device.setFiresystemId(1);
         deviceService.addDevice(device);
     }

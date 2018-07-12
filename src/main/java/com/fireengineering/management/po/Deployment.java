@@ -3,15 +3,13 @@ package com.fireengineering.management.po;
 public class Deployment {
     private Integer id;
 
-    private Integer projectId;
+    private Integer deviceId;
 
-    private String area;
-
-    private String building;
-
-    private String floor;
+    private Integer placeId;
 
     private Integer spotId;
+
+    private String qrcode;
 
     private String note;
 
@@ -23,36 +21,20 @@ public class Deployment {
         this.id = id;
     }
 
-    public Integer getProjectId() {
-        return projectId;
+    public Integer getDeviceId() {
+        return deviceId;
     }
 
-    public void setProjectId(Integer projectId) {
-        this.projectId = projectId;
+    public void setDeviceId(Integer deviceId) {
+        this.deviceId = deviceId;
     }
 
-    public String getArea() {
-        return area;
+    public Integer getPlaceId() {
+        return placeId;
     }
 
-    public void setArea(String area) {
-        this.area = area == null ? null : area.trim();
-    }
-
-    public String getBuilding() {
-        return building;
-    }
-
-    public void setBuilding(String building) {
-        this.building = building == null ? null : building.trim();
-    }
-
-    public String getFloor() {
-        return floor;
-    }
-
-    public void setFloor(String floor) {
-        this.floor = floor == null ? null : floor.trim();
+    public void setPlaceId(Integer placeId) {
+        this.placeId = placeId;
     }
 
     public Integer getSpotId() {
@@ -61,6 +43,14 @@ public class Deployment {
 
     public void setSpotId(Integer spotId) {
         this.spotId = spotId;
+    }
+
+    public String getQrcode() {
+        return qrcode;
+    }
+
+    public void setQrcode(String qrcode) {
+        this.qrcode = qrcode == null ? null : qrcode.trim();
     }
 
     public String getNote() {
