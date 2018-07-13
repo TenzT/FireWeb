@@ -64,6 +64,10 @@
 </div>
 <script type="text/javascript">
 
+    //跳转到记录页面
+    $(".maintenance_record").click(function () {
+        $(this).attr("href", "/fire/maintenance/getMaintenanceList");
+    });
     //跳转到设备页面
     $(".device_management").click(function () {
         $(this).attr("href", "/fire/device/getDeviceList");

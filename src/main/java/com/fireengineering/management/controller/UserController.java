@@ -96,4 +96,15 @@ public class UserController {
             return JsonMsg.success();
         }
     }
+
+    @RequestMapping(value = "/getAllUserName", method = RequestMethod.GET)
+    @ResponseBody
+    public JsonMsg getAllUserName() {
+        List<User> users = userService.getAllUserName();
+        if (users != null){
+            return JsonMsg.success().addInfo("users", users);
+        }else {
+            return JsonMsg.fail();
+        }
+    }
 }

@@ -27,4 +27,6 @@ public interface MaintenanceMapper {
     int updateByPrimaryKeySelective(Maintenance record);
 
     int updateByPrimaryKey(Maintenance record);
+
+    List<Maintenance> selectByLimitAndOffset(@Param("offset") Integer offset, @Param("limit")Integer limit);
 }

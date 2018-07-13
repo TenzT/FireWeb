@@ -31,4 +31,6 @@ public interface UserMapper {
     List<User> selectByLimitAndOffset(@Param("offset")Integer offset, @Param("limit")Integer limit);
 
     User selectByName(@Param("userUsername") String userUsername);
+
+    List<User> getAllName();
 }

@@ -33,4 +33,8 @@ public class UserServiceImpl implements UserService {
     public User getUserByName(String userUsername) {
         return userMapper.selectByName(userUsername);
     }
+
+    public List<User> getAllUserName() {
+        return userMapper.getAllName();
+    }
 }

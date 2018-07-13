@@ -24,10 +24,10 @@
     </association>
     <association property="place" javaType="com.fireengineering.management.po.Place">
       <id column="place_id" property="id"></id>
-      <id column="pname" property="project.name"></id>
-      <id column="district" property="district"></id>
-      <id column="building" property="building"></id>
-      <id column="floor" property="floor"></id>
+      <result column="pname" property="project.name"></result>
+      <result column="district" property="district"></result>
+      <result column="building" property="building"></result>
+      <result column="floor" property="floor"></result>
     </association>
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -120,6 +120,21 @@
     (select project.name,place.*from place, project where place.project_id=project.id) p
     where
     dep.place_id=p.id and dev.id=dep.device_id and dep.id=#{deploymentId}
+  </select>
+
+  <select id="getAllWithPo" resultMap="DevDepPlaceMap">
+    select
+    dev.name dname,
+    p.name pname,
+    p.district,
+    p.building,
+    p.floor,
+    dep.*
+    from deployment dep,
+    device dev,
+    (select project.name,place.*from place, project where place.project_id=project.id) p
+    where
+    dep.place_id=p.id and dev.id=dep.device_id
   </select>
 
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.fireengineering.management.po.DeploymentExample" >

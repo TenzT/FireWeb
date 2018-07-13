@@ -40,4 +40,8 @@ public class DeploymentServiceImpl implements DeploymentService {
     public int updateDeploymentById(Deployment deployment) {
         return deploymentMapper.updateByPrimaryKey(deployment);
     }
+
+    public List<Deployment> getAllDeployment() {
+        return deploymentMapper.getAllWithPo();
+    }
 }

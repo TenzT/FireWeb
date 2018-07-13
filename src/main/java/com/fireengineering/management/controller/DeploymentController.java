@@ -138,4 +138,14 @@ public class DeploymentController {
                 .addObject("curPage", curPage);
         return mv;
     }
+
+    @RequestMapping(value = "/getAllDeployment", method = RequestMethod.GET)
+    @ResponseBody
+    public JsonMsg getAllDeployment(){
+        List<Deployment> deployments = deploymentsService.getAllDeployment();
+        if (deployments != null){
+            return JsonMsg.success().addInfo("deployments", deployments);
+        }
+        return JsonMsg.fail();
+    }
 }

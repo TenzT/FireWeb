@@ -31,4 +31,6 @@ public interface DeploymentMapper {
     List<Deployment> selectByLimitAndOffset(@Param("offset") Integer offset, @Param("limit")Integer limit);
 
     Deployment selectWithPoById(@Param("deploymentId") Integer deploymentId);
+
+    List<Deployment> getAllWithPo();
 }

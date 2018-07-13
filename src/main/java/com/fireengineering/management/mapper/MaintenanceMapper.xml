@@ -9,6 +9,27 @@
     <result column="date" property="date" jdbcType="DATE" />
     <result column="note" property="note" jdbcType="VARCHAR" />
   </resultMap>
+  <resultMap id="UsrDepMap" type="com.fireengineering.management.po.Maintenance" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="deployment_id" property="deploymentId" jdbcType="INTEGER" />
+    <result column="record" property="record" jdbcType="INTEGER" />
+    <result column="date" property="date" jdbcType="INTEGER" />
+    <result column="note" property="note" jdbcType="VARCHAR" />
+    <association property="user" javaType="com.fireengineering.management.po.User">
+      <id column="user_id" property="id"></id>
+      <result column="uname" property="name"></result>
+    </association>
+    <association property="deployment" javaType="com.fireengineering.management.po.Deployment">
+      <id column="deployment_id" property="id"></id>
+      <result column="spot_id" property="spotId"></result>
+      <result column="pname" property="place.project.name"></result>
+      <result column="dname" property="device.name"></result>
+      <result column="district" property="place.district"></result>
+      <result column="building" property="place.building"></result>
+      <result column="floor" property="place.floor"></result>
+    </association>
+  </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
       <foreach collection="oredCriteria" item="criteria" separator="or" >
@@ -70,6 +91,44 @@
   <sql id="Base_Column_List" >
     id, user_id, deployment_id, record, date, note
   </sql>
+  <select id="selectByLimitAndOffset" resultMap="UsrDepMap">
+    SELECT
+    m.*,
+    usr.name uname,
+    dep.dname,
+    dep.pname,
+    dep.district,
+    dep.building,
+    dep.floor,
+    dep.spot_id
+    FROM
+    maintenance m,
+    user usr,
+        (select
+        dep.id,
+        dev.name dname,
+        p.name pname,
+        p.district,
+        p.building,
+        p.floor,
+        dep.spot_id
+        from
+        deployment dep,
+        device dev,
+            (select
+            place.id,
+            proj.name,
+            place.district,
+            place.building,
+            place.floor
+            from project proj, place
+            where proj.id=place.project_id) p
+        where p.id=dep.place_id and dev.id=dep.device_id) dep
+    where
+    usr.id=m.user_id and dep.id=m.deployment_id
+    limit #{offset}, #{limit}
+  </select>
+
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.fireengineering.management.po.MaintenanceExample" >
     select
     <if test="distinct" >

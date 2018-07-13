@@ -78,6 +78,11 @@
     from user
     LIMIT #{offset}, #{limit}
   </select>
+
+  <select id="getAllName" resultMap="BaseResultMap">
+    select id,name
+    from user
+  </select>
   
   <select id="selectByName" resultMap="BaseResultMap">
     select

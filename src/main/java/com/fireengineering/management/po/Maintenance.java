@@ -1,5 +1,7 @@
 package com.fireengineering.management.po;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class Maintenance {
@@ -11,6 +13,7 @@ public class Maintenance {
 
     private String record;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     private Date date;
 
     private String note;
@@ -65,5 +68,21 @@ public class Maintenance {
 
     public void setNote(String note) {
         this.note = note == null ? null : note.trim();
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Deployment getDeployment() {
+        return deployment;
+    }
+
+    public void setDeployment(Deployment deployment) {
+        this.deployment = deployment;
     }
 }

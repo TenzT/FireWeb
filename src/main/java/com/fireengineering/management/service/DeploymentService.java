@@ -16,4 +16,6 @@ public interface DeploymentService {
     public int addDeployment(Deployment deployment);
 
     public int updateDeploymentById(Deployment deployment);
+
+    List<Deployment> getAllDeployment();
 }
