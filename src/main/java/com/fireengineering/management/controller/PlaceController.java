@@ -160,4 +160,14 @@ public class PlaceController {
                 .addObject("curPage", curPage);
         return mv;
     }
+
+    @RequestMapping(value = "/getAllPlace", method = RequestMethod.GET)
+    @ResponseBody
+    public JsonMsg getAllDevice(){
+        List<Place> places = placesService.getAllPlace();
+        if (places != null){
+            return JsonMsg.success().addInfo("places", places);
+        }
+        return JsonMsg.fail();
+    }
 }

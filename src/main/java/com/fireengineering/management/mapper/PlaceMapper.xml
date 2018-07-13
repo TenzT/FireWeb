@@ -87,6 +87,12 @@
     where place.project_id=project.id
     limit #{offset}, #{limit}
   </select>
+
+  <select id="selectAll" resultMap="PlaceProjectMap">
+    select project.name pname, place.*
+    from place, project
+    where place.project_id=project.id
+  </select>
   <select id="selectByName" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />

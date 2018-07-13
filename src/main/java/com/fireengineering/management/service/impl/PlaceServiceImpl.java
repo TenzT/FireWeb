@@ -12,39 +12,43 @@ import java.util.List;
 @Service
 public class PlaceServiceImpl implements PlaceService {
     @Autowired
-    PlaceMapper PlaceMapper;
+    PlaceMapper placeMapper;
 
     public int getPlaceCount() {
         PlaceExample example = new PlaceExample();
-        return PlaceMapper.countByExample(example);
+        return placeMapper.countByExample(example);
 
     }
 
     public Place getPlaceById(Integer PlaceId) {
-        return PlaceMapper.selectByPrimaryKey(PlaceId);
+        return placeMapper.selectByPrimaryKey(PlaceId);
     }
 
     public Place getPlaceByName(String PlaceName){
         if(PlaceName==null) {
             return null;
         }
-        return PlaceMapper.selectByName(PlaceName);
+        return placeMapper.selectByName(PlaceName);
     }
 
 
     public List<Place> getPlaceList(Integer offset, Integer limit) {
-        return PlaceMapper.selectByLimitAndOffset(offset, limit);
+        return placeMapper.selectByLimitAndOffset(offset, limit);
     }
 
     public int deletePlaceById(Integer PlaceId){
-        return PlaceMapper.deleteByPrimaryKey(PlaceId);
+        return placeMapper.deleteByPrimaryKey(PlaceId);
     }
 
     public int addPlace(Place Place) {
-        return PlaceMapper.insert(Place);
+        return placeMapper.insert(Place);
     }
 
     public int updatePlaceById(Place Place) {
-        return PlaceMapper.updateByPrimaryKey(Place);
+        return placeMapper.updateByPrimaryKey(Place);
+    }
+
+    public List<Place> getAllPlace() {
+        return placeMapper.selectAll();
     }
 }

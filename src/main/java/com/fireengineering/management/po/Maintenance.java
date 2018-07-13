@@ -15,6 +15,10 @@ public class Maintenance {
 
     private String note;
 
+    private User user;
+
+    private Deployment deployment;
+
     public Integer getId() {
         return id;
     }

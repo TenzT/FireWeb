@@ -13,6 +13,10 @@ public class Deployment {
 
     private String note;
 
+    private Place place;
+
+    private Device device;
+
     public Integer getId() {
         return id;
     }
@@ -60,4 +64,21 @@ public class Deployment {
     public void setNote(String note) {
         this.note = note == null ? null : note.trim();
     }
+
+    public Place getPlace() {
+        return place;
+    }
+
+    public void setPlace(Place place) {
+        this.place = place;
+    }
+
+    public Device getDevice() {
+        return device;
+    }
+
+    public void setDevice(Device device) {
+        this.device = device;
+    }
+
 }

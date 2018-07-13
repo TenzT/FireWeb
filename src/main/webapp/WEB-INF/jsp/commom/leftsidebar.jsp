@@ -85,6 +85,10 @@
     $(".place_management").click(function () {
         $(this).attr("href", "/fire/place/getPlaceList");
     });
+    //跳转到部署页面
+    $(".deployment_management").click(function () {
+        $(this).attr("href", "/fire/deployment/getDeploymentList");
+    });
 </script>
 </body>
 </html>

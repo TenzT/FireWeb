@@ -169,7 +169,7 @@ public class FireSystemController {
      */
     @RequestMapping(value = "/getAllFiresystem", method = RequestMethod.GET)
     @ResponseBody
-    public JsonMsg getDeptName(){
+    public JsonMsg getAllFiresystem(){
         List<Firesystem> firesystems = firesystemService.getAllFiresystem();
         if (firesystems != null){
             return JsonMsg.success().addInfo("firesystems", firesystems);

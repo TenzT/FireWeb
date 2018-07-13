@@ -1,6 +1,7 @@
 package com.fireengineering.management.controller;
 
 import com.fireengineering.management.po.Device;
+import com.fireengineering.management.po.Firesystem;
 import com.fireengineering.management.service.DeviceService;
 import com.fireengineering.management.util.JsonMsg;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -159,5 +160,14 @@ public class DeviceController {
                 .addObject("totalPages", totalPages)
                 .addObject("curPage", curPage);
         return mv;
+    }
+    @RequestMapping(value = "/getAllDevice", method = RequestMethod.GET)
+    @ResponseBody
+    public JsonMsg getAllDevice(){
+        List<Device> devices = devicesService.getAllDevice();
+        if (devices != null){
+            return JsonMsg.success().addInfo("devices", devices);
+        }
+        return JsonMsg.fail();
     }
 }

@@ -27,9 +27,9 @@
                 <!-- Table -->
                 <table class="table table-bordered table-hover" id="project_table">
                     <thead>
-                        <th>系统名称</th>
-                        <th>系统负责人</th>
-                        <th>系统描述</th>
+                        <th>项目名称</th>
+                        <th>项目负责人</th>
+                        <th>项目描述</th>
                         <th>操作</th>
                     </thead>
                     <tbody>
@@ -126,7 +126,7 @@
     });
 
 
-    <!-- ==========================系统删除操作=================================== -->
+    <!-- ==========================项目删除操作=================================== -->
     $(".project_delete_btn").click(function () {
         var delProjectId = $(this).parent().parent().find("td:eq(0)").text();
         var delProjectName = $(this).parent().parent().find("td:eq(1)").text();

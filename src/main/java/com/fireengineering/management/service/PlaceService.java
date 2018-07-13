@@ -18,4 +18,6 @@ public interface PlaceService {
     public Place getPlaceByName(String PlaceName);
 
     public int updatePlaceById(Place Place);
+
+    public List<Place> getAllPlace();
 }

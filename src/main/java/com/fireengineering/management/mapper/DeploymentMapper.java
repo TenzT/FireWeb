@@ -27,4 +27,8 @@ public interface DeploymentMapper {
     int updateByPrimaryKeySelective(Deployment record);
 
     int updateByPrimaryKey(Deployment record);
+
+    List<Deployment> selectByLimitAndOffset(@Param("offset") Integer offset, @Param("limit")Integer limit);
+
+    Deployment selectWithPoById(@Param("deploymentId") Integer deploymentId);
 }

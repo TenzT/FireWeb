@@ -18,4 +18,6 @@ public interface DeviceService {
     public Device getDeviceByName(String deviceName);
 
     public int updateDeviceById(Device device);
+
+    public List<Device> getAllDevice();
 }

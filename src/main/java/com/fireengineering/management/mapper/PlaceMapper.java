@@ -31,4 +31,6 @@ public interface PlaceMapper {
     Place selectByName(@Param("placeName") String placeName);
 
     List<Place> selectByLimitAndOffset(@Param("offset")Integer offset, @Param("limit")Integer limit);
+
+    List<Place> selectAll();
 }

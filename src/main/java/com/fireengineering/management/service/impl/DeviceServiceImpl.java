@@ -47,4 +47,9 @@ public class DeviceServiceImpl implements DeviceService {
     public int updateDeviceById(Device device) {
         return deviceMapper.updateByPrimaryKey(device);
     }
+
+    public List<Device> getAllDevice(){
+        DeviceExample example = new DeviceExample();
+        return deviceMapper.selectByExample(example);
+    }
 }
