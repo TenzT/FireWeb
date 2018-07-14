@@ -30,11 +30,12 @@ public class UserServiceImpl implements UserService {
         return userMapper.insert(user);
     }
 
-    public User getUserByName(String userUsername) {
-        return userMapper.selectByName(userUsername);
+    public User getUserByUsername(String userUsername) {
+        return userMapper.selectByUsername(userUsername);
     }
 
     public List<User> getAllUserName() {
         return userMapper.getAllName();
     }
+
 }

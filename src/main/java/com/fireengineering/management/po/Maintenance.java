@@ -7,9 +7,9 @@ import java.util.Date;
 public class Maintenance {
     private Integer id;
 
-    private String userId;
+    private Integer userId;
 
-    private String deploymentId;
+    private Integer deploymentId;
 
     private String record;
 
@@ -30,20 +30,20 @@ public class Maintenance {
         this.id = id;
     }
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId == null ? null : userId.trim();
+    public void setUserId(Integer userId) {
+        this.userId = userId == null ? null : userId;
     }
 
-    public String getDeploymentId() {
+    public Integer getDeploymentId() {
         return deploymentId;
     }
 
-    public void setDeploymentId(String deploymentId) {
-        this.deploymentId = deploymentId == null ? null : deploymentId.trim();
+    public void setDeploymentId(Integer deploymentId) {
+        this.deploymentId = deploymentId == null ? null : deploymentId;
     }
 
     public String getRecord() {

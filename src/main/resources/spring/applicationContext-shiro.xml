@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+	http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.2.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-3.2.xsd ">
+
+	<description>Shiro Configuration</description>
+
+	<!-- 安全认证过滤器 -->
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+		<property name="securityManager" ref="securityManager" />
+        <property name="loginUrl" value="/fire/login" />
+        <property name="successUrl" value="/fire/main" />
+        <property name="filterChainDefinitions">
+			<value>
+				/fire/login = anon
+				/fire/dologin = anon
+				/** = authc
+			</value>
+        </property>
+    </bean>
+
+	<!-- 定义Shiro SecurityManager -->
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+		<property name="realm" ref="customRealm"/>
+	</bean>
+
+	<!-- 自定义realm -->
+	<bean class="com.fireengineering.management.shiro.realm.CustomRealm"
+		  id="customRealm">
+		<!--<property name="credentialsMatcher" ref="credentialsMatcher"/>-->
+	</bean>
+
+	<!--处理权限验证-->
+	<aop:config proxy-target-class="true"></aop:config>
+	<bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor" id="advisor">
+		<property name="securityManager" ref="securityManager"/>
+	</bean>
+	<bean class="org.apache.shiro.spring.LifecycleBeanPostProcessor" id="lifecycleBeanPostProcessor"></bean>
+
+	<!--<bean class="org.apache.shiro.authc.credential.HashedCredentialsMatcher" id="credentialsMatcher">-->
+		<!--<property name="hashAlgorithmName" value="md5"/>-->
+		<!--<property name="hashIterations" value="1"/>-->
+	<!--</bean>-->
+</beans>

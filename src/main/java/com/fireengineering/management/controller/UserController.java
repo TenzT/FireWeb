@@ -3,11 +3,13 @@ package com.fireengineering.management.controller;
 import com.fireengineering.management.po.User;
 import com.fireengineering.management.service.UserService;
 import com.fireengineering.management.util.JsonMsg;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.security.auth.Subject;
 import java.util.List;
 @Controller
 @RequestMapping(value = "/fire/user/")
@@ -38,7 +40,7 @@ public class UserController {
      * @return
      */
     @RequestMapping(value = "/getUserList", method = RequestMethod.GET)
-    public ModelAndView getDeptList(@RequestParam(value = "pageNo", defaultValue = "1") Integer pageNo){
+    public ModelAndView getUserList(@RequestParam(value = "pageNo", defaultValue = "1") Integer pageNo){
         ModelAndView mv = new ModelAndView("userPage");
         //每页显示的记录行数
         int limit = 5;
@@ -88,7 +90,7 @@ public class UserController {
         if(!userUsername.matches(regName)){
             return JsonMsg.fail().addInfo("name_reg_error", "输入姓名为2-5位中文或6-16位英文和数字组合");
         }
-        User user = userService.getUserByName(userUsername);
+        User user = userService.getUserByUsername(userUsername);
 
         if (user != null){
             return JsonMsg.fail().addInfo("name_reg_error", "用户名重复");

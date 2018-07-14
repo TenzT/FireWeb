@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 @Controller
 @RequestMapping(value = "/fire/maintenance")
@@ -103,7 +104,8 @@ public class MaintenanceController {
      */
     @RequestMapping(value = "/addMaintenance", method = RequestMethod.POST)
     @ResponseBody
-    public JsonMsg addMaintenance(Maintenance maintenance){
+    public JsonMsg addMaintenance(HttpSession session,Maintenance maintenance){
+        maintenance.setUserId((Integer)session.getAttribute("userId"));
         int res = maintenancesService.addMaintenance(maintenance);
         if (res == 1){
             return JsonMsg.success();

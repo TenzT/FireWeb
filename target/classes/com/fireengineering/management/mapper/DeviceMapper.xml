@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fireengineering.management.mapper.DeviceMapper" >
+  <resultMap id="BaseResultMap" type="com.fireengineering.management.po.Device" >
+    <id column="did" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="firesystem_id" property="firesystemId" jdbcType="INTEGER" />
+    <result column="note" property="note" jdbcType="VARCHAR" />
+    <result column="img" property="img" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="DevSystemMap" type="com.fireengineering.management.po.Device" >
+    <id column="did" property="id" jdbcType="INTEGER" />
+    <result column="dname" property="name" jdbcType="VARCHAR" />
+    <result column="firesystem_id" property="firesystemId" jdbcType="INTEGER" />
+    <result column="dnote" property="note" jdbcType="VARCHAR" />
+    <result column="dimg" property="img" jdbcType="VARCHAR" />
+    <association property="firesystem" javaType="com.fireengineering.management.po.Firesystem">
+      <id column="fid" property="id"></id>
+      <result column="fname" property="name"></result>
+    </association>
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, name, firesystem_id, note, img
+  </sql>
+  
+  <select id="selectByLimitAndOffset" resultMap="DevSystemMap">
+    select d.id did,d.name dname,d.firesystem_id,d.note dnote,d.img dimg,f.id fid,f.name fname
+    from device d, firesystem f
+    where
+    d.firesystem_id = f.id
+    LIMIT #{offset}, #{limit}
+  </select>
+
+  <select id="selectByName" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from device
+    where name=#{deviceName}
+  </select>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.fireengineering.management.po.DeviceExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from device
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from device
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from device
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.fireengineering.management.po.DeviceExample" >
+    delete from device
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.fireengineering.management.po.Device" >
+    insert into device (id, name, firesystem_id, 
+      note, img)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{firesystemId,jdbcType=INTEGER}, 
+      #{note,jdbcType=VARCHAR}, #{img,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.fireengineering.management.po.Device" >
+    insert into device
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="firesystemId != null" >
+        firesystem_id,
+      </if>
+      <if test="note != null" >
+        note,
+      </if>
+      <if test="img != null" >
+        img,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="firesystemId != null" >
+        #{firesystemId,jdbcType=INTEGER},
+      </if>
+      <if test="note != null" >
+        #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="img != null" >
+        #{img,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.fireengineering.management.po.DeviceExample" resultType="java.lang.Integer" >
+    select count(*) from device
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update device
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.firesystemId != null" >
+        firesystem_id = #{record.firesystemId,jdbcType=INTEGER},
+      </if>
+      <if test="record.note != null" >
+        note = #{record.note,jdbcType=VARCHAR},
+      </if>
+      <if test="record.img != null" >
+        img = #{record.img,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update device
+    set id = #{record.id,jdbcType=INTEGER},
+      name = #{record.name,jdbcType=VARCHAR},
+      firesystem_id = #{record.firesystemId,jdbcType=INTEGER},
+      note = #{record.note,jdbcType=VARCHAR},
+      img = #{record.img,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.fireengineering.management.po.Device" >
+    update device
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="firesystemId != null" >
+        firesystem_id = #{firesystemId,jdbcType=INTEGER},
+      </if>
+      <if test="note != null" >
+        note = #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="img != null" >
+        img = #{img,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.fireengineering.management.po.Device" >
+    update device
+    set name = #{name,jdbcType=VARCHAR},
+      firesystem_id = #{firesystemId,jdbcType=INTEGER},
+      note = #{note,jdbcType=VARCHAR},
+      img = #{img,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
