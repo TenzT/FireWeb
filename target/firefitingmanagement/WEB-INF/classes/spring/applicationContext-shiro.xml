@@ -23,6 +23,7 @@
 		<property name="securityManager" ref="securityManager" />
         <property name="loginUrl" value="/fire/login" />
         <property name="successUrl" value="/fire/main" />
+        <property name="unauthorizedUrl" value="null"/>
         <property name="filterChainDefinitions">
 			<value>
 				/fire/login = anon
@@ -44,14 +45,13 @@
 	</bean>
 
 	<!--处理权限验证-->
-	<aop:config proxy-target-class="true"></aop:config>
 	<bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor" id="advisor">
 		<property name="securityManager" ref="securityManager"/>
 	</bean>
-	<bean class="org.apache.shiro.spring.LifecycleBeanPostProcessor" id="lifecycleBeanPostProcessor"></bean>
+	<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
 
-	<!--<bean class="org.apache.shiro.authc.credential.HashedCredentialsMatcher" id="credentialsMatcher">-->
-		<!--<property name="hashAlgorithmName" value="md5"/>-->
-		<!--<property name="hashIterations" value="1"/>-->
-	<!--</bean>-->
+	<!-- Enable Shiro Annotations for Spring-configured beans.  Only run after
+         the lifecycleBeanProcessor has run: -->
+	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"
+		  depends-on="lifecycleBeanPostProcessor"/>
 </beans>

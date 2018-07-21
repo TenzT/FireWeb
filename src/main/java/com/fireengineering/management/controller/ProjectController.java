@@ -3,6 +3,7 @@ package com.fireengineering.management.controller;
 import com.fireengineering.management.po.Project;
 import com.fireengineering.management.service.ProjectService;
 import com.fireengineering.management.util.JsonMsg;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -21,6 +22,7 @@ public class ProjectController {
      * @param projectId
      * @return
      */
+    @RequiresRoles("admin")
     @RequestMapping(value = "/delProject/{projectId}", method = RequestMethod.DELETE)
     @ResponseBody
     public JsonMsg deleteDept(@PathVariable("projectId") Integer projectId){
@@ -49,6 +51,7 @@ public class ProjectController {
      * @param project
      * @return
      */
+    @RequiresRoles("admin")
     @RequestMapping(value = "/updateProject/{projectId}", method = RequestMethod.PUT)
     @ResponseBody
     public JsonMsg updateDeptById(@PathVariable("projectId") Integer projectId, Project project){
@@ -90,6 +93,7 @@ public class ProjectController {
      * @param project
      * @return
      */
+    @RequiresRoles("admin")
     @RequestMapping(value = "/addProject", method = RequestMethod.PUT)
     @ResponseBody
     public JsonMsg addDept(Project project){

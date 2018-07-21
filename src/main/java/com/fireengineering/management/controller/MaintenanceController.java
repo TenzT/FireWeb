@@ -3,6 +3,7 @@ package com.fireengineering.management.controller;
 import com.fireengineering.management.po.Maintenance;
 import com.fireengineering.management.service.MaintenanceService;
 import com.fireengineering.management.util.JsonMsg;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -17,10 +18,11 @@ public class MaintenanceController {
     MaintenanceService maintenancesService;
 
     /**
-     * 设备删除操作
+     * 记录删除操作
      * @param maintenanceId
      * @return
      */
+    @RequiresRoles("admin")
     @RequestMapping(value = "/deleteMaintenance/{maintenanceId}", method = RequestMethod.DELETE)
     @ResponseBody
     public JsonMsg deleteMaintenance(@PathVariable("maintenanceId") Integer maintenanceId){
@@ -29,7 +31,7 @@ public class MaintenanceController {
             res = maintenancesService.deleteMaintenanceById(maintenanceId);
         }
         if (res != 1){
-            return JsonMsg.fail().addInfo("main_del_error", "设备删除异常");
+            return JsonMsg.fail().addInfo("main_del_error", "记录删除异常");
         }
         return JsonMsg.success();
     }
@@ -46,11 +48,12 @@ public class MaintenanceController {
 //    }
 
     /**
-     * 更改设备信息
+     * 更改记录信息
      * @param maintenanceId
      * @param maintenance
      * @return
      */
+    @RequiresRoles("admin")
     @RequestMapping(value ="/updateMaintenance/{maintenanceId}", method = RequestMethod.PUT)
     @ResponseBody
     public JsonMsg updateMaintenance(@PathVariable("maintenanceId") Integer maintenanceId,  Maintenance maintenance){
@@ -63,7 +66,7 @@ public class MaintenanceController {
     }
 
 //    /**
-//     * 查询输入的设备姓名是否重复
+//     * 查询输入的记录姓名是否重复
 //     * @param maintenanceName
 //     * @return
 //     */
@@ -77,14 +80,14 @@ public class MaintenanceController {
 //        }
 //        Maintenance maintenance = maintenancesService.getMaintenanceByName(maintenanceName);
 //        if (maintenance != null){
-//            return JsonMsg.fail().addInfo("name_reg_error", "设备名重复");
+//            return JsonMsg.fail().addInfo("name_reg_error", "记录名重复");
 //        }else {
 //            return JsonMsg.success();
 //        }
 //    }
 
     /**
-     * 新增设备后，查询最新的页数
+     * 新增记录后，查询最新的页数
      * @return
      */
     @RequestMapping(value = "/getTotalPages", method = RequestMethod.GET)
@@ -98,7 +101,7 @@ public class MaintenanceController {
     }
 
     /**
-     * 新增设备
+     * 新增记录
      * @param maintenance
      * @return
      */
@@ -115,7 +118,7 @@ public class MaintenanceController {
     }
 
 //    /**
-//     * 根据id查询设备信息
+//     * 根据id查询记录信息
 //     * @param maintenanceId
 //     * @return
 //     */

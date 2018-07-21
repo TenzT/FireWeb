@@ -3,6 +3,7 @@ package com.fireengineering.management.controller;
 import com.fireengineering.management.po.Place;
 import com.fireengineering.management.service.PlaceService;
 import com.fireengineering.management.util.JsonMsg;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -21,6 +22,7 @@ public class PlaceController {
      * @param placeId
      * @return
      */
+    @RequiresRoles("admin")
     @RequestMapping(value = "/deletePlace/{placeId}", method = RequestMethod.DELETE)
     @ResponseBody
     public JsonMsg deletePlace(@PathVariable("placeId") Integer placeId){
@@ -51,6 +53,7 @@ public class PlaceController {
      * @param place
      * @return
      */
+    @RequiresRoles("admin")
     @RequestMapping(value ="/updatePlace/{placeId}", method = RequestMethod.PUT)
     @ResponseBody
     public JsonMsg updatePlace(@PathVariable("placeId") Integer placeId,  Place place){
@@ -87,6 +90,7 @@ public class PlaceController {
      * 新增设备后，查询最新的页数
      * @return
      */
+    @RequiresRoles("admin")
     @RequestMapping(value = "/getTotalPages", method = RequestMethod.GET)
     @ResponseBody
     public JsonMsg getTotalPage(){

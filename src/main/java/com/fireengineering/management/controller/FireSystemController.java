@@ -3,6 +3,7 @@ package com.fireengineering.management.controller;
 import com.fireengineering.management.po.Firesystem;
 import com.fireengineering.management.service.FiresystemService;
 import com.fireengineering.management.util.JsonMsg;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -22,6 +23,7 @@ public class FireSystemController {
      * @param sysId
      * @return
      */
+    @RequiresRoles("admin")
     @RequestMapping(value = "/delFireSystem/{sysId}", method = RequestMethod.DELETE)
     @ResponseBody
     public JsonMsg deleteDept(@PathVariable("sysId") Integer sysId){
@@ -50,6 +52,7 @@ public class FireSystemController {
      * @param firesystem
      * @return
      */
+    @RequiresRoles("admin")
     @RequestMapping(value = "/updateFiresystem/{firesystemId}", method = RequestMethod.PUT)
     @ResponseBody
     public JsonMsg updateDeptById(@PathVariable("firesystemId") Integer firesystemId, Firesystem firesystem){
@@ -91,6 +94,7 @@ public class FireSystemController {
      * @param firesystem
      * @return
      */
+    @RequiresRoles("admin")
     @RequestMapping(value = "/addFiresystem", method = RequestMethod.PUT)
     @ResponseBody
     public JsonMsg addDept(Firesystem firesystem){

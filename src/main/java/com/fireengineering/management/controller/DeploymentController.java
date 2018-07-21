@@ -3,6 +3,7 @@ package com.fireengineering.management.controller;
 import com.fireengineering.management.po.Deployment;
 import com.fireengineering.management.service.DeploymentService;
 import com.fireengineering.management.util.JsonMsg;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +21,7 @@ public class DeploymentController {
      * @param deploymentId
      * @return
      */
+    @RequiresRoles("admin")
     @RequestMapping(value = "/deleteDeployment/{deploymentId}", method = RequestMethod.DELETE)
     @ResponseBody
     public JsonMsg deleteDeployment(@PathVariable("deploymentId") Integer deploymentId){
@@ -50,6 +52,7 @@ public class DeploymentController {
      * @param deployment
      * @return
      */
+    @RequiresRoles("admin")
     @RequestMapping(value ="/updateDeployment/{deploymentId}", method = RequestMethod.PUT)
     @ResponseBody
     public JsonMsg updateDeployment(@PathVariable("deploymentId") Integer deploymentId,  Deployment deployment){
@@ -80,6 +83,7 @@ public class DeploymentController {
      * @param deployment
      * @return
      */
+    @RequiresRoles("admin")
     @RequestMapping(value = "/addDeployment", method = RequestMethod.POST)
     @ResponseBody
     public JsonMsg addDeployment(Deployment deployment){

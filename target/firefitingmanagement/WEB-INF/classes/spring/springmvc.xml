@@ -50,6 +50,28 @@ http://www.springframework.org/schema/tx/spring-tx-3.2.xsd ">
 		</list>
 	</property>
 </bean>
+
+<!-- 异常处理器，在发生相应的异常时进行跳转 -->
+<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+	<property name="exceptionMappings">
+		<props>
+			<prop key="org.apache.shiro.authz.UnauthorizedException">noAuth</prop>	<!--shiro不通过时-->
+		</props>
+	</property>
+</bean>
+
+<!--处理权限验证-->
+<bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor" id="advisor">
+	<property name="securityManager" ref="securityManager"/>
+</bean>
+<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+
+<!-- Enable Shiro Annotations for Spring-configured beans.  Only run after
+	 the lifecycleBeanProcessor has run: -->
+<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"
+	  depends-on="lifecycleBeanPostProcessor"/>
+
+
 <!--&lt;!&ndash;拦截器&ndash;&gt;-->
 <!--<mvc:interceptors>-->
 	<!--<mvc:interceptor>-->

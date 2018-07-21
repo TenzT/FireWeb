@@ -4,6 +4,7 @@ import com.fireengineering.management.po.Device;
 import com.fireengineering.management.po.Firesystem;
 import com.fireengineering.management.service.DeviceService;
 import com.fireengineering.management.util.JsonMsg;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -22,6 +23,7 @@ public class DeviceController {
      * @param deviceId
      * @return
      */
+    @RequiresRoles("admin")
     @RequestMapping(value = "/deleteDevice/{deviceId}", method = RequestMethod.DELETE)
     @ResponseBody
     public JsonMsg deleteDevice(@PathVariable("deviceId") Integer deviceId){
@@ -52,6 +54,7 @@ public class DeviceController {
      * @param device
      * @return
      */
+    @RequiresRoles("admin")
     @RequestMapping(value ="/updateDevice/{deviceId}", method = RequestMethod.PUT)
     @ResponseBody
     public JsonMsg updateDevice(@PathVariable("deviceId") Integer deviceId,  Device device){
@@ -88,6 +91,7 @@ public class DeviceController {
      * 新增设备后，查询最新的页数
      * @return
      */
+    @RequiresRoles("admin")
     @RequestMapping(value = "/getTotalPages", method = RequestMethod.GET)
     @ResponseBody
     public JsonMsg getTotalPage(){
